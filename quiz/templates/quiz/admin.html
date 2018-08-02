@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Science Quiz Admin</title>
+		<script
+  src="http://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
+<style>
+.row input {
+	width: 30px;
+}
+</style>
+	</head>
+	<body>
+		<div>
+			<button id="gamestart">게임 시작</button>
+		</div>
+		<br><br><br>
+		<div>
+			<button id="postechchoose">포스텍 퀴즈 선택</button>
+			<button id="kaistchoose">카이스트 퀴즈 선택</button>
+		</div>
+		<br><br><br>
+		<div>
+			<button id="bothright">양측 정답</button>
+			<button id="postechright">포스텍 정답</button>
+			<button id="kaistright">카이스트 정답</button>
+			<button id="bothwrong">양측 오답</button>
+		</div>
+		<br><br><br>
+		<div>
+			<form id="sendquiz">
+				Quiz Number:
+				<input type="text" name="quiznum"></input>
+				<button>퀴즈 내기</button>
+			</form>
+		</div>
+		<br><br><br>
+		<div>
+			<button id="postechbingo">포스텍 빙고</button>
+			<button id="kaistbingo">카이스트 빙고</button>
+		</div>
+		<br><br><br>
+		<form id="sendpostechbingo">
+			<div class="row">
+				<input type="text" name="1"></input>
+				<input type="text" name="2"></input>
+				<input type="text" name="3"></input>
+				<input type="text" name="4"></input>
+				<input type="text" name="5"></input>
+			</div>
+			<div class="row">
+				<input type="text" name="6"></input>
+				<input type="text" name="7"></input>
+				<input type="text" name="8"></input>
+				<input type="text" name="9"></input>
+				<input type="text" name="10"></input>
+			</div>
+			<div class="row">
+				<input type="text" name="11"></input>
+				<input type="text" name="12"></input>
+				<input type="text" name="13"></input>
+				<input type="text" name="14"></input>
+				<input type="text" name="15"></input>
+			</div>
+			<div class="row">
+				<input type="text" name="16"></input>
+				<input type="text" name="17"></input>
+				<input type="text" name="18"></input>
+				<input type="text" name="19"></input>
+				<input type="text" name="20"></input>
+			</div>
+			<div class="row">
+				<input type="text" name="21"></input>
+				<input type="text" name="22"></input>
+				<input type="text" name="23"></input>
+				<input type="text" name="24"></input>
+				<input type="text" name="25"></input>
+			</div>
+			<button>포스텍 빙고 제출</button>
+		</form>
+		<br><br><br>
+		<form id="sendkaistbingo">
+			<div class="row">
+				<input type="text" name="1"></input>
+				<input type="text" name="2"></input>
+				<input type="text" name="3"></input>
+				<input type="text" name="4"></input>
+				<input type="text" name="5"></input>
+			</div>
+			<div class="row">
+				<input type="text" name="6"></input>
+				<input type="text" name="7"></input>
+				<input type="text" name="8"></input>
+				<input type="text" name="9"></input>
+				<input type="text" name="10"></input>
+			</div>
+			<div class="row">
+				<input type="text" name="11"></input>
+				<input type="text" name="12"></input>
+				<input type="text" name="13"></input>
+				<input type="text" name="14"></input>
+				<input type="text" name="15"></input>
+			</div>
+			<div class="row">
+				<input type="text" name="16"></input>
+				<input type="text" name="17"></input>
+				<input type="text" name="18"></input>
+				<input type="text" name="19"></input>
+				<input type="text" name="20"></input>
+			</div>
+			<div class="row">
+				<input type="text" name="21"></input>
+				<input type="text" name="22"></input>
+				<input type="text" name="23"></input>
+				<input type="text" name="24"></input>
+				<input type="text" name="25"></input>
+			</div>
+			<button>카이스트 빙고 제출</button>
+		</form>
+		<script>
+API_URL = 'http://' + window.location.hostname + ':' + window.location.port;
+
+$("button#gamestart").bind("click", function() {
+	$.ajax({
+		url: API_URL + '/quiz/admin',
+		dataType: 'json',
+		method: 'POST',
+		command: 'gamestart',
+	});
+});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,583 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta charset="utf-8">
+
+		<title>2017 POSTECH-KAIST Science War</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Inconsolata|Share+Tech+Mono" rel="stylesheet">
+
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+		<style>
+		@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+		@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+		html {
+			background-repeat: repeat;
+			background-size: 200px 200px;
+			background-position: center center;
+		}
+
+		.quiz-header {
+			font-family: 'Teko', sans-serif;
+			text-align: center;
+			padding-top: 10px;
+		}
+
+		.quiz-header h1#sub-title {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		.quiz-header h1#title {
+			font-size: 60px;
+			margin-top: 0;
+			margin-bottom: 20px;
+		}
+
+		.quiz-container {
+			margin-left: auto;
+			margin-right: auto;
+			font-family: 'Quicksand', sans-serif;
+		}
+
+		.quiz-number {
+			height: 70px;
+			font-size: 50px;
+			font-family: 'Teko', sans-serif;
+			margin: 0;
+			border-bottom: 1px solid #dbdbdb;
+		}
+
+		.quiz-content {
+			padding-top: 10px;
+			font-family: 'Noto Sans KR', sans-serif;
+			height: 180px;
+			overflow: scroll;
+		}
+
+		div#clock {
+			width: 140px;
+			margin: auto;
+			font-family: 'Share Tech Mono', monospace;
+			color: red;
+			background-color: black;
+			border: 2px solid #dbdbdb;
+			border-radius: 3px;
+			font-size: 40px;
+			margin-top: 10px;
+		}
+
+		.bingo-container {
+			display: inline-block;
+			width: 255px;
+			padding: 10px;
+			margin: 5px;
+			background-color: #eee;
+			border: 1px solid #dbdbdb;
+			border-radius: 3px;
+		}
+
+		.bingo-container.postech {
+			float: left;
+		}
+
+		.bingo-container.kaist {
+			float: right;
+		}
+
+		.quiz {
+			background-color: #eee;
+			border: 1px solid #dbdbdb;
+			border-radius: 3px;
+			height: 325px;
+			padding: 10px;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		.quiz .announcement {
+			font-family: 'Jeju Gothic', serif;
+			color: white;
+			text-shadow: 0 0 20px black;
+		}
+
+		.postech {
+			color: rgb(198, 16, 101);
+		}
+
+		.kaist {
+			color: rgb(35, 84, 165);
+		}
+
+		.bingo-header {
+			height: 70px;
+			text-align: center;
+			font-size: 50px;
+			font-family: 'Teko', sans-serif;
+		}
+
+		.bingo-cell {
+			width: 400px;
+			display: inline-block;
+			width: 45px;
+			height: 42px;
+			margin: 3px;
+			background-color: white;
+			text-align: center;
+			padding-top: 3px;
+			font-size: 30px;
+			font-weight: bold;
+		}
+
+		.postech .bingo-cell.right {
+			background-color: rgb(198, 16, 101);
+			color: white;
+		}
+
+		.kaist .bingo-cell.right {
+			background-color: rgb(35, 84, 165);
+			color: white;
+		}
+
+		.bingo-cell.wrong {
+			background-color: #eee;
+		}
+
+		.bingo-cell.phys {
+			color: #0074D9;
+		}
+
+		.bingo-cell.chem {
+			color: orangered;
+		}
+
+		.bingo-cell.bio {
+			color: limegreen;
+		}
+
+		.bingo-cell.math {
+			color: orange;
+		}
+
+		.bingo-cell.com {
+			color: slategray;
+		}
+
+		span.phys {
+			color: #0074D9;
+		}
+
+		span.chem {
+			color: orangered;
+		}
+
+		span.bio {
+			color: limegreen;
+		}
+
+		span.math {
+			color: orange;
+		}
+
+		span.com {
+			color: slategray;
+		}
+
+		.info-container p {
+			margin-top: 20px;
+			margin-bottom: 10px;
+		}
+
+		.info-container {
+			text-align: center;
+			font-family: 'Noto Sans KR', sans-serif;
+		}
+
+		@media (min-width: 992px) { /* xl & lg */
+			.quiz {
+				position: absolute;
+				left: 50%;
+				margin-top: 5px;
+			}
+
+			.info-container {
+				margin-top: 400px;
+			}
+		}
+
+		@media (min-width: 1200px) { /* xl */
+			.quiz-container {
+				width: 1140px;
+			}
+
+			.quiz .announcement {
+				font-size: 60px;
+				margin-top: 125px;
+			}
+
+			.quiz {
+				width: 500px;
+				margin-left: -261px;
+			}
+		}
+
+		@media (min-width: 992px) and (max-width: 1200px) { /* lg */
+			.quiz-container {
+				width: 960px;
+			}
+
+			.quiz .announcement {
+				font-size: 40px;
+				margin-top: 140px;
+			}
+
+			.quiz {
+				width: 340px;
+				margin-left: -181px;
+			}
+		}
+
+		@media (min-width: 768px) and (max-width: 992px) { /* md */
+			.quiz-container {
+				width: 720px;
+			}
+
+			.quiz .announcement {
+				font-size: 80px;
+				margin-top: 120px;
+			}
+
+			.bingo-container {
+				margin-left: 40px;
+				margin-right: 40px;
+			}
+		}
+
+		@media (min-width: 576px) and (max-width: 768px) { /* sm */
+			.quiz-container {
+				width: 540px;
+			}
+
+			.quiz .announcement {
+				font-size: 50px;
+				margin-top: 130px;
+			}
+
+			.bingo-container {
+				margin-left: 131px;
+				margin-right: 131px;
+			}
+
+			.bingo-container.postech {
+				float: none;
+			}
+
+			.bingo-container.kaist {
+				float: none;
+			}
+		}
+
+		@media (max-width: 576px) { /* xs */
+			.quiz .announcement {
+				font-size: 30px;
+				margin-top: 140px;
+			}
+
+			.bingo-container {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.bingo-container.postech {
+				float: none;
+			}
+
+			.bingo-container.kaist {
+				float: none;
+			}
+		}
+
+		</style>
+
+	</head>
+	<body>
+		<div class="quiz-header">
+			<h1 id="sub-title"><span class="postech">POSTECH</span>-<span class="kaist">KAIST</span> Science War</h1>
+			<h1 id="title">Science Quiz</h1>
+		</div>
+		<div class="quiz-container">
+			<div class="quiz" id="quiz">
+			</div>
+			<div class="bingo-container postech">
+			</div>
+			<div class="bingo-container kaist">
+			</div>
+		</div>
+		<div class="info-container">
+			<p><span class="math">■ MATH</span> <span class="chem">■ CHEM</span> <span class="bio">■ BIO</span> <span class="phys">■ PHYS</span> <span class="com">■ COM</span></p>
+			<h1><span class="postech" id="postechscore">0</span> : <span class="kaist" id="kaistscore">0</span></h1>
+			<h2>최근 3문제 정답 여부</h2>
+			<h3 id="rightwrong">- - - : - - -</h3>
+		</div>
+<script>
+	API_URL = 'http://' + window.location.hostname + ':' + window.location.port;
+
+	var postechbingo = $(".bingo-container.postech");
+	var kaistbingo = $(".bingo-container.kaist");
+	var quiz = $("#quiz");
+
+	postechbingo.hide();
+	kaistbingo.hide();
+
+	var announce_num = 0;
+	var lock = 0;
+	var quiz_start = false;
+
+	var announce_mp3 = new Audio('{% static "quiz/announcement.mp3" %}');
+	var quizstart_mp3 = new Audio('{% static "quiz/quizstart.mp3" %}');
+	var countdown_mp3 = new Audio('{% static "quiz/countdown.mp3" %}');
+
+	function loadAnnouncement() {
+		$.ajax({
+			url: API_URL + '/quiz/announcement',
+			dataType: 'json',
+		}).done(function(data){
+			if (announce_num != data.num) {
+				if (announce_num == 0) {
+					postechbingo.slideDown();
+					kaistbingo.slideDown();
+				}
+
+				if (data.is_quiz_start)
+					quizstart_mp3.play();
+				else
+					announce_mp3.play();
+
+				var ment = $('<div class="announcement">' + data.ment + '</div>');
+				lock = 1;
+				quiz.empty();
+				announce_num = data.num;
+			
+				quiz.append(ment);
+				ment.css('position', 'relative');
+				ment.css('left', '50px');
+				ment.css('opacity', 0);
+
+				setTimeout(function(){
+					ment.animate({
+						left: '0px',
+						opacity: 100
+					}, 1500, 'swing', function(){
+						ment.animate({
+							left: '-50px',
+							opacity: 0
+						}, 2000, 'swing', function(){
+							lock = 0;
+						});
+					});
+				}, 500);
+
+				if (data.is_quiz_start)
+					quiz_start = true;
+
+			}
+		}).fail(function(xhr, status, err) {
+			console.error(status, err.toString());
+		});
+	}
+
+	var time_left;
+	var timer_timeout;
+
+	function timer() {
+		if (time_left < 0) {
+			clearTimeout(timer_timeout);
+			quiz.empty();
+
+			var ment = $('<div class="announcement">TIME OUT</div>');
+			lock = 1;
+			quiz.empty();
+			
+			quiz.append(ment);
+			ment.css('position', 'relative');
+			ment.css('left', '50px');
+			ment.css('opacity', 0);
+
+			ment.animate({
+				left: '0px',
+				opacity: 100
+			}, 1500, 'swing', function(){
+				ment.animate({
+					left: '-50px',
+					opacity: 0
+				}, 2000, 'swing', function(){
+					lock = 0;
+				});
+			});
+		}
+
+		if (time_left == 12)
+			setTimeout(function(){countdown_mp3.play();}, 500);
+
+		var m = time_left == 120 ? 2 : (time_left >= 60 ? 1 : 0);
+		var sec = time_left - m * 60;
+		var sec_string = sec < 10 ? ("0" + sec) : sec.toString();
+		var str = "0" + m + ":" + sec_string;
+		$('#clock').html(str);
+		time_left -= 1;
+	}
+
+	function loadJson() {
+		$.ajax({
+			url: API_URL + '/quiz/json',
+			dataType: 'json',
+		}).done(function(data){
+			if (lock == 1)
+				return;
+
+			postechbingo.empty();
+			kaistbingo.empty();
+
+			postechbingo.append($('<div class="bingo-header">P O S T E C H</div>'));
+			kaistbingo.append($('<div class="bingo-header">K A I S T</div>'));
+			
+			if (quiz_start) {
+				quiz.empty();
+				quiz.append($('<div class="quiz-number">QUIZ No.' + data.quiznow.num + '</div>'));
+				quiz.append($('<div class="quiz-content"><img class="quiz-image" style="width: 100%" src=' + data.quiznow.url + '>'+ data.quiznow.content + '</div>'));
+
+				if (data.quiznow.option1) {
+					var option = $('<p class="option">1. ' + data.quiznow.option1 + "</p>");
+					$(".quiz-content").append(option);
+				}
+				if (data.quiznow.option2) {
+					var option = $('<p class="option">2. ' + data.quiznow.option2 + "</p>");
+					$(".quiz-content").append(option);
+				}
+				if (data.quiznow.option3) {
+					var option = $('<p class="option">3. ' + data.quiznow.option3 + "</p>");
+					$(".quiz-content").append(option);
+				}
+				if (data.quiznow.option4) {
+					var option = $('<p class="option">4. ' + data.quiznow.option4 + "</p>");
+					$(".quiz-content").append(option);
+				}
+				if (data.quiznow.option5) {
+					var option = $('<p class="option">5. ' + data.quiznow.option5 + "</p>");
+					$(".quiz-content").append(option);
+				}
+				if (data.quiznow.option6) {
+					var option = $('<p class="option">6. ' + data.quiznow.option6 + "</p>");
+					$(".quiz-content").append(option);
+				}
+				if (data.quiznow.option7) {
+					var option = $('<p class="option">7. ' + data.quiznow.option7 + "</p>");
+					$(".quiz-content").append(option);
+				}
+				if (data.quiznow.option8) {
+					var option = $('<p class="option">8. ' + data.quiznow.option8 + "</p>");
+					$(".quiz-content").append(option);
+				}
+				if (data.quiznow.option9) {
+					var option = $('<p class="option">9. ' + data.quiznow.option9 + "</p>");
+					$(".quiz-content").append(option);
+				}
+				if (data.quiznow.option10) {
+					var option = $('<p class="option">10. ' + data.quiznow.option10 + "</p>");
+					$(".quiz-content").append(option);
+				}
+
+				quiz.append($('<div id="clock">02:00</div>'));
+
+				time_left = 15;
+				timer_timeout = setInterval(timer, 1000);
+
+				quiz_start = false;
+			}
+
+
+			for (var i=0; i<5; i++) {
+				row = $('<div class="bingo-row"></div>');
+				for (var j=0; j<5; j++) {
+					info = data.postech_bingo[i][j];
+
+					cell = $('<div class="bingo-cell">' + info.num + '</div>');
+
+					if (info.num <= 5)
+						cell.addClass("phys");
+					else if (info.num <= 10)
+						cell.addClass("chem");
+					else if (info.num <=15)
+						cell.addClass("bio");
+					else if (info.num <=20)
+						cell.addClass("math");
+					else if (info.num <= 25)
+						cell.addClass("com");
+
+					if (info.passed) {
+						if (info.right)
+							cell.addClass("right");
+						else
+							cell.addClass("wrong");
+					}
+
+					row.append(cell);
+				}
+				postechbingo.append(row);
+			}
+
+			for (var i=0; i<5; i++) {
+				row = $('<div class="bingo-row"></div>');
+				for (var j=0; j<5; j++) {
+					info = data.kaist_bingo[i][j];
+
+					cell = $('<div class="bingo-cell">' + info.num + '</div>');
+
+					if (info.num <= 5)
+						cell.addClass("phys");
+					else if (info.num <= 10)
+						cell.addClass("chem");
+					else if (info.num <=15)
+						cell.addClass("bio");
+					else if (info.num <=20)
+						cell.addClass("math");
+					else if (info.num <= 25)
+						cell.addClass("com");
+
+					if (info.passed) {
+						if (info.right)
+							cell.addClass("right");
+						else
+							cell.addClass("wrong");
+					}
+
+					row.append(cell);
+				}
+				kaistbingo.append(row);
+			}
+
+			$("#postechscore").html(data.postechscore);
+			$("#kaistscore").html(data.kaistscore);
+
+			$("#rightwrong").html(data.postechrw + " : " + data.kaistrw);
+		}).fail(function(xhr, status, err) {
+			console.error(status, err.toString());
+		});
+	}
+	
+	loadJson();
+
+	setInterval(loadJson, 1000);
+	setInterval(loadAnnouncement, 1000);
+</script>
+	</body>
+</html>
