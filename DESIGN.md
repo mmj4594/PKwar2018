@@ -1,14 +1,23 @@
 # 디자인 개선사항
-## Developer
-* mmj4594
-* SodaBori
+## 이미지
+* 신설경기에 맞는 이미지 추가(건우)
 
-## Development Environment
-### Basic
-* web server: nginx
-* middleware: uwsgi
-* web framework: django
-* database: sqlite
+## front-end framework
+* MDL -> materialize (시간이 된다면)
 
-### pip list
-* django==2.1
+만약 프레임워크를 바꾼다면 전 페이지를 다시 만들어야 해서 너무 오래 걸릴수도 있음.
+
+## 각 페이지
+### 메인 페이지
+* 전체적인 UI 개선(모바일로 봐도, PC로 봐도 끔찍.)
+
+### 페이지 공통
+* 페이지별 제목 추가. EX)농구 페이지에 제목으로 농구 적어주기.
+* 헤더 추가.
+* 폰트 색깔 안 맞는 부분 수정.
+* 한글/영어 변경 기능 추가. (시간이 된다면.)
+
+### 일정 페이지
+* 올해는 우리학교에서 열리니 일정과 장소를 통합. 기존 걸 쓰는 대신에
+기존 페이지에서 장소를 추가.
+
