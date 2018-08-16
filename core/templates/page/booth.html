@@ -1,0 +1,145 @@
+{% extends "page/layout.html" %}
+{% load staticfiles %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/booth.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="science-war-content mdl-layout__content">
+  <a name="top"></a>
+
+  <div class="science-war-supporters-section">
+    <div class="science-war-supporters-section-text">
+      <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">부스란?</div>
+      <p class="mdl-typography--font-light balanced-paragraph">
+        포스텍 학생들만의 개성있는 먹거리 부스와 학생들의 교류를 위한 다양한 교류부스 그리고 학생들의 심심한 배를 달래줄 여러가지 푸드트럭들이 준비가 되어있는 장소입니다.
+        여러분의 포카전을 한 층 더 재밌게 만들어보세요!
+      </p>
+    </div>
+  </div>
+
+  <div class="science-war-supporters-section">
+    <div class="science-war-supporters-section-stuff">
+      <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">부스 행사 종류</div>
+      <div class="science-war-card-container mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-postech-booth-event mdl-card mdl-shadow--3dp">
+            <img src="{% static 'images/postech-booth.png' %}" class="science-war-postech-booth-event__image">
+
+            <div class="mdl-card__actions">
+              <span class="science-war-booth-event__name">포스텍부스</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-exchange-booth-event mdl-card mdl-shadow--3dp">
+            <img src="{% static 'images/exchange-booth.png' %}" class="science-war-exchange-booth-event__image">
+
+            <div class="mdl-card__actions">
+              <span class="science-war-booth-event__name">교류부스</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-food-truck-event mdl-card mdl-shadow--3dp">
+            <img src="{% static 'images/food-truck.png' %}" class="science-war-food-truck-event__image">
+
+            <div class="mdl-card__actions">
+              <span class="science-war-booth-event__name">푸드트럭</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="science-war-supporters-section">
+    <div class="science-war-supporters-section-stuff">
+      <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">부스지도</div>
+      <img src="{% static 'images/booth-map.png' %}" width="100%" height="auto">
+      <div class="mdl-card__actions">
+        <a data-toggle="modal" href="{% static 'images/booth-map.png' %}" class="science-war-link mdl-button mdl-js-button mdl-typography--text-uppercase">
+          지도 자세히 보기
+          <i class="material-icons">chevron_right</i>
+        </a>
+      </div>
+
+      <div class="booth-table table-responsive">
+        <table class="mdl-data-table mdl-js-data-table">
+          <thead>
+            <tr>
+              <th class="mdl-data-table__cell--non-numeric">부스 번호</th>
+              <th class="mdl-data-table__cell--non-numeric">부스 내용</th>
+              <th class="mdl-data-table__cell--non-numeric">관련 행사</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>등만들기</td>
+              <td>교류부스</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>노점상연합회</td>
+              <td>포스텍부스</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>노점상연합회</td>
+              <td>포스텍부스</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>푸드트럭</td>
+              <td>푸드트럭</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>푸드트럭</td>
+              <td>푸드트럭</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>푸드트럭</td>
+              <td>푸드트럭</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>빙수</td>
+              <td>교류부스</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>술/공짜안주</td>
+              <td>교류부스</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>물풍선 던지고 받기</td>
+              <td>교류부스</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>풍선 다트</td>
+              <td>교류부스</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>캔볼링</td>
+              <td>교류부스</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}
+
+  {% block script %}
+  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  {% endblock %}

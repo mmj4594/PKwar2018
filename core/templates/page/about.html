@@ -1,0 +1,250 @@
+{% extends "page/layout.html" %}
+{% load staticfiles %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="science-war-content mdl-layout__content">
+  <a name="top"></a>
+
+  <div class="science-war-supporters-section">
+    <div class="science-war-supporters-section-text">
+      <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">포카전 소개</div>
+      <div class="science-war-card-container mdl-grid">
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--1-col-phone"></div>
+        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-image mdl-card mdl-shadow--3dp"></div>
+        </div>
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+        </div>
+        <p class="mdl-typography--font-light science-war-text">
+          POSTECH-KAIST 학생대제전은 2002년부터 시작된 양교간 교류친선대회로, 축구, 농구, 야구와 같은 운동경기 뿐만이 아니라 이공계 특성대학만이 할 수 있는 해킹, A.I. 등의 종목도 같이 실시합니다. 주로 포카전 또는 카포전으로 줄여서 부르고, 매년 번갈아가면서 포스텍, 카이스트에서 열립니다. 어웨이 경기에 해당하는 학교를 앞글자로, 홈 경기에 해당하는 학교를 뒷글자로 하기 때문에 포스텍에서 할 경우 카포전, 카이스트에서 할 경우 포카전으로 불립니다. 다만 포카전 준비위원회나 포카전 서포터즈 등 한 학교에 국한되는 경우 각자 명칭을 유지하고 있습니다. 또한 경기 이외에도 교류행사, 각종 공연 등을 진행합니다.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="science-war-supporters-section">
+    <div class="science-war-supporters-section-text">
+      <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">2017년도 종목</div>
+      <div class="science-war-card-container mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-event-card__soccer mdl-card mdl-shadow--3dp" onclick="location.href='/sports/soccer'">
+            <div class="mdl-card__actions">
+              <span class="science-war-card-image__event">축구</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-event-card__basketball mdl-card mdl-shadow--3dp" onclick="location.href='/sports/basketball'">
+            <div class="mdl-card__actions">
+              <span class="science-war-card-image__event">농구</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-event-card__baseball mdl-card mdl-shadow--3dp" onclick="location.href='/sports/baseball'">
+            <div class="mdl-card__actions">
+              <span class="science-war-card-image__event">야구</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-event-card__esports mdl-card mdl-shadow--3dp" onclick="location.href='/sports/esports'">
+            <div class="mdl-card__actions">
+              <span class="science-war-card-image__event">E-Sports</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-event-card__quiz mdl-card mdl-shadow--3dp" onclick="location.href='/sports/quiz'">
+            <div class="mdl-card__actions">
+              <span class="science-war-card-image__event">과학퀴즈</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-event-card__hacking mdl-card mdl-shadow--3dp" onclick="location.href='/sports/hacking'">
+            <div class="mdl-card__actions">
+              <span class="science-war-card-image__event">해킹</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-event-card__ai mdl-card mdl-shadow--3dp" onclick="location.href='/sports/ai'">
+            <div class="mdl-card__actions">
+              <span class="science-war-card-image__event">A.I.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-event-card__badminton mdl-card mdl-shadow--3dp" onclick="location.href='/sports/badminton'">
+            <div class="mdl-card__actions">
+              <span class="science-war-card-image__event">배드민턴</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="science-war-supporters-section">
+    <div class="science-war-supporters-section-text">
+      <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">역대 전적</div>
+      <div class="science-war-card-container mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-match-kaist-win mdl-card mdl-shadow--3dp">
+            <img src="{% static 'images/kaist.png' %}" class="science-war-match-kaist-win__image">
+            <div class="mdl-card__actions">
+              <span class="science-war-card-image__year">2002</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-match-kaist-win mdl-card mdl-shadow--3dp">
+            <img src="{% static 'images/kaist.png' %}" class="science-war-match-kaist-win__image">
+            <div class="mdl-card__actions">
+              <span class="science-war-card-image__year">2003</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-match-postech-win mdl-card mdl-shadow--3dp">
+            <img src="{% static 'images/postech.png' %}" class="science-war-match-postech-win__image">
+            <div class="mdl-card__actions">
+              <span class="science-war-card-image__year">2004</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-match-kaist-win mdl-card mdl-shadow--3dp">
+            <img src="{% static 'images/kaist.png' %}" class="science-war-match-kaist-win__image">
+            <div class="mdl-card__actions">
+              <span class="science-war-card-image__year">2005</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-match-kaist-win mdl-card mdl-shadow--3dp">
+            <img src="{% static 'images/kaist.png' %}" class="science-war-match-kaist-win__image">
+            <div class="mdl-card__actions">
+              <span class="science-war-card-image__year">2006</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-match-postech-win mdl-card mdl-shadow--3dp">
+            <img src="{% static 'images/postech.png' %}" class="science-war-match-postech-win__image">
+            <div class="mdl-card__actions">
+              <span class="science-war-card-image__year">2007</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-match-postech-win mdl-card mdl-shadow--3dp">
+            <img src="{% static 'images/postech.png' %}" class="science-war-match-postech-win__image">
+            <div class="mdl-card__actions">
+              <span class="science-war-card-image__year">2008</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-match-draw mdl-card mdl-shadow--3dp">
+            <img src="{% static 'images/draw.png' %}" class="science-war-match-draw__image">
+            <div class="mdl-card__actions">
+              <span class="science-war-card-image__year">2009</span>
+            </div>
+            <div class="science-war-match-draw__overlay">
+              <div class="science-war-cancel-reason-wrapper">
+                <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-cancel-reason">신종플루로 취소</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-match-postech-win mdl-card mdl-shadow--3dp">
+            <img src="{% static 'images/postech.png' %}" class="science-war-match-postech-win__image">
+            <div class="mdl-card__actions">
+              <span class="science-war-card-image__year">2010</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-match-postech-win mdl-card mdl-shadow--3dp">
+            <img src="{% static 'images/postech.png' %}" class="science-war-match-postech-win__image">
+            <div class="mdl-card__actions">
+              <span class="science-war-card-image__year">2011</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-match-kaist-win mdl-card mdl-shadow--3dp">
+            <img src="{% static 'images/kaist.png' %}" class="science-war-match-kaist-win__image">
+            <div class="mdl-card__actions">
+              <span class="science-war-card-image__year">2012</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-match-kaist-win mdl-card mdl-shadow--3dp">
+            <img src="{% static 'images/kaist.png' %}" class="science-war-match-kaist-win__image">
+            <div class="mdl-card__actions">
+              <span class="science-war-card-image__year">2013</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-match-kaist-win mdl-card mdl-shadow--3dp">
+            <img src="{% static 'images/kaist.png' %}" class="science-war-match-kaist-win__image">
+            <div class="mdl-card__actions">
+              <span class="science-war-card-image__year">2014</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-match-kaist-win mdl-card mdl-shadow--3dp">
+            <img src="{% static 'images/kaist.png' %}" class="science-war-match-kaist-win__image">
+            <div class="mdl-card__actions">
+              <span class="science-war-card-image__year">2015</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+          <div class="science-war-match-postech-win mdl-card mdl-shadow--3dp">
+            <img src="{% static 'images/postech.png' %}" class="science-war-match-kaist-win__image">
+            <div class="mdl-card__actions">
+              <span class="science-war-card-image__year">2016</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+
+  {% block script %}
+  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  {% endblock %}

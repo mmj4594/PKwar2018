@@ -1,0 +1,279 @@
+{% extends "page/layout.html" %}
+{% load staticfiles %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/supporters.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="science-war-content mdl-layout__content">
+      <a name="top"></a>
+        <div class="science-war-supporters-section-image"></div>
+      <div class="science-war-supporters-section">
+        <div class="science-war-supporters-section-text">
+          <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">서포터즈란?</div>
+          <p class="mdl-typography--font-light balanced-paragraph">
+            온라인 오프라인으로 서포터즈 모집이 진행됩니다.
+            서포터즈에 지원하면 포카전이 열리는 대전까지 왕복 셔틀버스, 응원 물품 패키지, 서포터즈 티셔츠가 무료로 제공되며 포준위와 카기단이 준비한 각종 이벤트에 참여할 수 있습니다!
+            총학생회 정회원이기만 하면 아무런 제약 없이 서포터즈가 될 수 있으니 얼른 서포터즈 모집에 지원하여 혜택과 즐거움을 누리세요!
+          </p>
+          <p class="mdl-typography--font-light">
+            서포터즈 온라인 모집 : 09월 04일 ~ 09월 17일
+          </p>
+          <div class="mdl-card__actions">
+            <a data-toggle="modal" href="#supporters-recruit" class="science-war-link mdl-button mdl-js-button mdl-typography--text-uppercase" id="supporters-recruit-btn" href="">
+              서포터즈 신청하기
+              <i class="material-icons">chevron_right</i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- modal -->
+      <div class="modal" id="supporters-recruit" role="dialog">
+        <div class="modal-content mdl-card mdl-shadow--3dp modal-cancel">
+          <div class="mdl-card__title mdl-card--expand">
+            <iframe src="https://bit.ly/2017pokasup" height='500px' frameborder=0 framespacing=0 marginheight=0 marginwidth=0 scrolling=yes vspace=0 class="modal-box"></iframe>
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-custom-close">
+              <span class="material-icons">close</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="science-war-supporters-section">
+        <div class="science-war-supporters-section-text">
+          <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">오프라인 서포터즈 모집</div>
+          <h4 class="mdl-typography--font-light">기간</h4>
+          <p class="mdl-typography--font-light">
+            09월 04일 ~ 09월 08일
+          </p>
+          <h4 class="mdl-typography--font-light">장소</h4>
+          <p class="mdl-typography--font-light">
+            지곡회관, RC, 학생회관
+          </p>
+          <h4 class="mdl-typography--font-light">시간</h4>
+          <h5 class="mdl-typography--font-light">점심</h5>
+          <p class="mdl-typography--font-light">
+            오후 12 : 00 ~ 오후 1 : 50
+          </p>
+          <h5 class="mdl-typography--font-light">저녁</h5>
+          <p class="mdl-typography--font-light">
+            오후 5 : 30 ~ 오후 6 : 30
+          </p>
+        </div>
+      </div>
+
+      <div class="science-war-supporters-section">
+        <div class="science-war-supporters-section-stuff">
+          <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">서포터즈 물품</div>
+          <div class="science-war-card-container mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-supporters-stuff mdl-card mdl-shadow--3dp">
+                <img src="{% static 'images/shirt.png' %}" class="science-war-supporters-stuff__image">
+
+                <div class="mdl-card__actions">
+                  <span class="science-war-supporters-stuff__name">티셔츠</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-supporters-stuff mdl-card mdl-shadow--3dp">
+                <img src="{% static 'images/clapper.png' %}" class="science-war-supporters-stuff__image">
+
+                <div class="mdl-card__actions">
+                  <span class="science-war-supporters-stuff__name">클래퍼</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-supporters-stuff mdl-card mdl-shadow--3dp">
+                <img src="{% static 'images/balloon.png' %}" class="science-war-supporters-stuff__image">
+
+                <div class="mdl-card__actions">
+                  <span class="science-war-supporters-stuff__name">응원막대</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-supporters-stuff mdl-card mdl-shadow--3dp">
+                <img src="{% static 'images/bottle.png' %}" class="science-war-supporters-stuff__image">
+
+                <div class="mdl-card__actions">
+                  <span class="science-war-supporters-stuff__name">물병</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-supporters-stuff mdl-card mdl-shadow--3dp">
+                <img src="{% static 'images/fan.png' %}" class="science-war-supporters-stuff__image">
+
+                <div class="mdl-card__actions">
+                  <span class="science-war-supporters-stuff__name">부채</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-supporters-stuff mdl-card mdl-shadow--3dp">
+                <img src="{% static 'images/bag.png' %}" class="science-war-supporters-stuff__image">
+
+                <div class="mdl-card__actions">
+                  <span class="science-war-supporters-stuff__name">가방</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="science-war-supporters-section">
+        <div class="science-war-supporters-section-event">
+          <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">서포터즈 행사</div>
+          <div class="science-war-card-container mdl-grid">
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="{% static 'images/event1.jpg' %}">
+              </div>
+              <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">스티커 모으고 선물 받자!!!</h4>
+              </div>
+              <div class="mdl-card__supporting-text science-war-event-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">
+                  이번 포카전 책자의 표지는 스티커 판입니다.
+                  포카전 경기를 관람하거나 교류행사에 참여하면 포준위가 스티커를 붙여줍니다.
+                  스티커 판에 스티커를 모아주세요.
+                  포카전이 끝난 후 포준위가 스티커 판을 수거하고 추첨 후 어마어마한 경품을 드립니다.
+                  스티커 개수에 따라 당첨 확률이 달라지므로 스티커를 최대한 많이 모아주세요!
+                  과학퀴즈의 스티커는 다른 스티커 두 개의 영향력을 가지므로 과학퀴즈 스티커는 반드시 모아야겠네요!
+                </span>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="{% static 'images/event2.jpg' %}">
+              </div>
+              <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">포카전 페이스북 이벤트!!!</h4>
+              </div>
+              <div class="mdl-card__supporting-text science-war-event-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">
+                  <b>이벤트1</b>
+                  <br>
+                  포카전 페이스북 페이지에 포카전 관련 게시물과 게시물 관련 퀴즈가 업로드 됩니다.
+                  게시물을 꼼꼼히 읽고 퀴즈를 맞추면 어마어마한 상품이 팡팡!
+                  <br><br>
+                  <b>이벤트2</b>
+                  <br>
+                  포카전 페이스북 페이지에 포스텍의 승리를 기원하는 댓글을 달고 친구를 한 명 이상 태그 하면 서포터즈 간식이 팡팡!
+
+                </span>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="{% static 'images/event3.jpg' %}">
+              </div>
+              <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">오늘의 치어로는 나야 나</h4>
+              </div>
+              <div class="mdl-card__supporting-text science-war-event-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">
+                  새터 축제 포카전에서 항상 멋있는 응원 무대를 보여주는 치어로!
+                  치어로 단원들이 뿜뿜하는 멋짐을 보기만 할 순 없습니다!
+                  포카전 서포터즈에 지원하신 분들께 치어로 단복을 입어볼 기회가 주어집니다!
+                  9월 13일 학생회관에서 치어로 단복을 입고 사진 찍으면 오늘만큼은 나도 치어로!
+                  서포터즈들에게만 기회가 주어지므로 반드시 서포터즈에 지원 해야겠네요!
+                </span>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="{% static 'images/event4.jpg' %}">
+              </div>
+              <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">You Got the Golden Ticket!</h4>
+              </div>
+              <div class="mdl-card__supporting-text science-war-event-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">
+                  서포터즈 물품 패키지 중 단 열 개의 패키지에만 황금 티켓이 들어있다!!!
+                  황금 티켓을 들고 포준위를 찾아오면 황금과 같은 경품이!
+                  황금 티켓이 들은 패키지는 전야제에서만 받을 수 있으니 전야제에도 많은 관심 부탁드려요!
+                </span>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="{% static 'images/event5.jpg' %}">
+              </div>
+              <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">N번째 서포터즈!</h4>
+              </div>
+              <div class="mdl-card__supporting-text science-war-event-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">
+                  전야제에 N번째로 입장하는 서포터에겐 잊지못할 추억을 포준위가 선물합니다!
+                  심심한 포스텍에서 잊지못할 추억을 남기고 싶다면!
+                  포카전 전야제에 오세요!
+                </span>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="{% static 'images/event6.jpg' %}">
+              </div>
+              <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">이번 포카전의 승자는 누구?</h4>
+              </div>
+              <div class="mdl-card__supporting-text science-war-event-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">
+                  이번 포카전 과연 누가 이길까요?
+                  9월 21일 전야제에서 나눠주는 토토 응모권에 경기 별 승패를 예측하여 맞추면 어마어마한 상품이!!!
+                  틀리더라도 추첨을 통해 상품을 받을 수 있으므로 참여만 해도 이득!
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}
+
+{% block script %}
+  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script type="text/javascript">
+  window.onload = function() {
+    var modal = document.getElementById("supporters-recruit");
+    var btn = document.getElementById("supporters-recruit-btn");
+    var close = document.getElementsByClassName("modal-cancel")[0];
+
+    btn.onclick = function() {
+      'use strict';
+      modal.style.display = "block";
+    }
+
+    close.onclick = function() {
+      'use strict';
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      'use strict';
+
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  };
+  </script>
+{% endblock %}

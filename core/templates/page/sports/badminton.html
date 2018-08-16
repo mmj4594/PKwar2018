@@ -1,0 +1,141 @@
+{% extends "page/layout.html" %}
+{% load staticfiles %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/sports/badminton.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="science-war-content mdl-layout__content">
+      <a name="top"></a>
+
+      <div class="science-war-supporters-section">
+        <div class="science-war-supporters-section-text">
+          <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">배드민턴 선수단장 서동해 (물리 17)</div>
+          <div class="science-war-card-container mdl-grid">
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--1-col-phone"></div>
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-player-captain-image mdl-card mdl-shadow--3dp"></div>
+            </div>
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+            </div>
+            <p class="mdl-typography--font-light science-war-event-text">
+              안녕하세요. 2017년도 포스텍카이스트학생대제전 배드민턴 경기 선수단장 서동해입니다.
+              첫 출전이니만큼 승부에 연연하기보다는 최선을 다하는 경기를 하도록 노력하겠습니다.
+              선수단도 좋은 결과를 위해 항상 열정을 다하여 훈련에 매진하겠습니다.
+              앞으로 정규종목 승급을 위해 재미있는 경기, 멋진 경기 하고 오겠습니다.
+              POSTECH 화이팅!
+            </p>
+          </div>
+        </div>
+
+        <div class="science-war-supporters-section-text">
+          <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">장소 및 시간</div>
+          <div class="science-war-card-container mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+              <div id="map_canvas"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="science-war-match-section">
+          <div class="science-war-match-title mdl-typography--display-1-color-contrast">선수단</div>
+          <div class="science-war-card-container mdl-grid">
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__player">서동해 물리17</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__player">최자홍 기계16</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__player">우성욱 생명16</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__player">이기훈 화공16</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__player">노수현 단일17</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="science-war-supporters-section">
+        <div class="science-war-supporters-section-text">
+          <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">신설종목</div>
+          <div class="science-war-card-container mdl-grid">
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--1-col-phone"></div>
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-new-game mdl-card mdl-shadow--3dp"></div>
+            </div>
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+            </div>
+            <p class="mdl-typography--font-light science-war-event-text">
+              배드민턴 종목의 경우 올해 처음으로 선보이는 종목입니다.
+              또한 이 종목의 경우 포스텍카이스트학생대제전의 승패에 영향을 주지 않습니다.
+              하지만 앞으로 지속적으로 이 경기를 해나간다면 이후 정식종목으로 변경될 가능성이 있습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+{% endblock %}
+
+{% block script %}
+  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxVLZtAE6N0fpOa7JIN5b3AHaxV49fMKo"></script>
+  <script type="text/javascript">
+  function initialize() {
+    var centerLating = new google.maps.LatLng(36.372402,127.361610);
+
+    var buildingLatlng= new google.maps.LatLng(36.372402,127.361610);
+
+    var myOptions = {
+        zoom: 15,
+        center: centerLating
+    };
+
+    var contentString = '<div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">배드민턴<p>카이스트 스포츠컴플렉스<br>오후 3:30 ~ 오후 4:30</p></div>';
+
+    var infowindow = new google.maps.InfoWindow({content: contentString});
+
+    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+    var marker = new google.maps.Marker({
+        position: buildingLatlng,
+        map: map,
+        title:"카이스트 스포츠컴플렉스"
+    });
+
+    infowindow.open(map, marker);
+    
+    marker.addListener('click', function() {
+      infowindow.open(map, marker);
+    });
+  }
+
+  document.getElementsByTagName("body").onload = initialize();
+  </script>
+{% endblock %}

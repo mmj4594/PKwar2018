@@ -1,0 +1,142 @@
+{% extends "page/layout.html" %}
+{% load staticfiles %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/PoApper.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="science-war-content mdl-layout__content">
+      <a name="top"></a>
+
+      <div class="science-war-supporters-section">
+        <div class="science-war-supporters-section-text">
+          <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">PoApper</div>
+          <div class="science-war-card-container mdl-grid">
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--1-col-phone"></div>
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-player-captain-image mdl-card mdl-shadow--3dp"></div>
+            </div>
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+            </div>
+            <p class="mdl-typography--font-light balance-paragraph">
+              PoApper는 2011년 스마트폰의 보급과 함께 시작한 동아리로 현재는 POSTECIAN을 위한 다양한 서비스를 제작 및 운영하고 있으며 POSTECH 개발자간 네트워크를 구성하고 있습니다. 또한 개발에 뜻이 있지만 무엇을 해야할지 모르는 초보 개발자들에게 개발에 대한 세미나와 포애퍼 선배들과의 교류를 통해 개발자 양성에도 힘을 쓰고 있습니다.
+              <br>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="science-war-supporters-section">
+        <div class="science-war-supporters-section-text">
+          <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">개발진</div>
+          <div class="science-war-card-container mdl-grid">
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="{% static 'images/team1.jpg' %}">
+              </div>
+              <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">신지웅</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead"><p class="balance-paragraph">팀장<br>Web Front == NoGaDa</p></span>
+              </div>
+              <div class="mdl-card__actions">
+                <a class="science-war-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://www.facebook.com/profile.php?id=100006195639494">
+                  더 알아보기
+                </a>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="{% static 'images/team2.jpg' %}">
+              </div>
+              <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">문민재</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead"><p class="balance-paragraph">팀원<br>역시 웹 어렵다 ㅠㅠ</p></span>
+              </div>
+              <div class="mdl-card__actions">
+                <a class="science-war-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://www.facebook.com/profile.php?id=100003977818796">
+                  더 알아보기
+                </a>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="{% static 'images/team3.jpg' %}">
+              </div>
+              <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">권혁철</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead"><p class="balance-paragraph">팀원<br>웹개발 == 노가다</p></span>
+              </div>
+              <div class="mdl-card__actions">
+                <a class="science-war-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://www.facebook.com/hyukcheol">
+                  더 알아보기
+                </a>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="{% static 'images/team4.jpg' %}">
+              </div>
+              <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">윤영식</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead"><p class="balance-paragraph">팀원<br>2017 포카전 화이팅!!</p></span>
+              </div>
+              <div class="mdl-card__actions">
+                <a class="science-war-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://www.facebook.com/profile.php?id=100007124137474">
+                  더 알아보기
+                </a>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="{% static 'images/team5.jpg' %}">
+              </div>
+              <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">박건우</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead"><p class="balance-paragraph">팀원<br>일러스트레이터를 배워야겠다.</p></span>
+              </div>
+              <div class="mdl-card__actions">
+                <a class="science-war-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://www.facebook.com/profile.php?id=100007674103542">
+                  더 알아보기
+                </a>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="{% static 'images/team6.jpg' %}">
+              </div>
+              <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">석민상</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead"><p class="balance-paragraph">팀원<br>웹개발 ㄷㄷ...</p></span>
+              </div>
+              <div class="mdl-card__actions">
+                <a class="science-war-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://www.facebook.com/profile.php?id=100004336893448">
+                  더 알아보기
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}
+
+{% block script %}
+  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+{% endblock %}

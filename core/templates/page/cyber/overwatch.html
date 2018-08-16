@@ -1,0 +1,131 @@
+{% extends "page/layout.html" %}
+{% load staticfiles %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/cyber/overwatch.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="science-war-content mdl-layout__content">
+      <a name="top"></a>
+
+      <div class="science-war-supporters-section">
+        <div class="science-war-supporters-section-text">
+          <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">오버워치</div>
+          <p class="left-paragraph mdl-typography--font-light">
+            현재 많은 사람들이 즐기고 있는 하이퍼 FPS 게임 오버워치입니다.
+            개성있고 다양한 캐릭터 6명이 팀을 이뤄 점령, 방어, 화물 운송 등 다양한 목표를 향해 대결합니다.
+            개인의 실력은 물론 자신의 팀과의 협동, 그리고 상대 팀 전략에 대한 이해가 필요합니다.
+            1년 사이 완전히 달라진 메타에서 과연 승자는 누가 될까요?
+          </p>
+          <div class="mdl-card__actions">
+            <a class="science-war-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://playoverwatch.com/ko-kr/game/">
+              자세히 알아보기
+              <i class="material-icons">chevron_right</i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+        <div class="science-war-supporters-section">
+          <div class="science-war-supporters-section-text">
+            <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">경기 규칙</div>
+            <p class="left-paragraph mdl-typography--font-light" style="text-align: center">
+              5판 3선승제<br>
+              <b>APEX 방식을 채택</b><br>
+              1set : 쟁탈 (3판 2선승)<br>
+              2set : 점령<br>
+              3set : 점령/호위<br>
+              4set : 호위<br>
+              5set : 점령/호위 (3set와 다른 맵)<br>
+              동점시 단판 쟁탈전을 통해 승부를 가름
+            </p>
+          </div>
+        </div>
+
+        <div class="science-war-supporters-section">
+          <div class="science-war-supporters-section-text">
+            <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">참가 선수</div>
+            <div class="science-war-card-container mdl-grid">
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+                  <div class="mdl-card__actions">
+                    <span class="science-war-card-image__player">김남훈 산경13</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+                  <div class="mdl-card__actions">
+                    <span class="science-war-card-image__player">정용준 컴공15</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+                  <div class="mdl-card__actions">
+                    <span class="science-war-card-image__player">손태영 컴공15</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+                  <div class="mdl-card__actions">
+                    <span class="science-war-card-image__player">윤재원 전자15</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+                  <div class="mdl-card__actions">
+                    <span class="science-war-card-image__player">임태형 전자15</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+                  <div class="mdl-card__actions">
+                    <span class="science-war-card-image__player">신은성 생명16</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="science-war-supporters-section">
+          <div class="science-war-supporters-section-text">
+            <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">2016년 경기 결과</div>
+            <div class="science-war-card-container mdl-grid">
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="science-war-event-card__overwatch mdl-card mdl-shadow--3dp">
+                  <div class="mdl-card__actions">
+                    <span class="science-war-card-image__event">오버워치</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+                <div class="science-war-match-postech-score mdl-card mdl-shadow--3dp">
+                  <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>1</span></div></div>
+                </div>
+              </div>
+
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+                <div class="science-war-match-kaist-score mdl-card mdl-shadow--3dp">
+                  <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>2</span></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+{% endblock %}
+
+{% block script %}
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+{% endblock %}

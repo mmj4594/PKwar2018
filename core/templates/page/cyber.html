@@ -1,0 +1,169 @@
+{% extends "page/layout.html" %}
+{% load staticfiles %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/cyber.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="science-war-content mdl-layout__content">
+      <a name="top"></a>
+      <div class="science-war-supporters-section">
+        <div class="science-war-supporters-section-text">
+          <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">사이버 포카전</div>
+          <p class="left-paragraph mdl-typography--font-light">
+            작년에 이어서 올해도 개최되는 사이버 포카전은 작년에 비해서 한층 더 많아진 6가지 게임에 대해서 승부를 겨루는 행사입니다.
+            사이버 포카전은 9월 18일부터 매일 진행되며 날마다 새로운 게임으로 여러분을 찾아갑니다.
+            사이버 포카전은 온라인으로 생중계되며 스타크래프트, 스타크래프트2, 하스스톤, 카트라이더, 히어로즈 오브 더 스톰 그리고 오버워치에 대해서 진행합니다.
+            정식 종목이 아니기 때문에 포카전 전체 승부에는 영향을 끼치지 않습니다.
+            국내 최고 이공계 대학 중 어느 쪽이 더 게임을 잘 할까요?
+          </p>
+        </div>
+      </div>
+
+      <div class="science-war-supporters-section">
+        <div class="science-war-supporters-section-text">
+          <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">2017년도 종목</div>
+          <div class="science-war-card-container mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-event-card__starcraft mdl-card mdl-shadow--3dp" onclick="location.href='/cyber/starcraft'">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__event">스타크래프트</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-event-card__starcraft2 mdl-card mdl-shadow--3dp" onclick="location.href='/cyber/starcraft2'">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__event">스타크래프트2</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-event-card__hearthstone mdl-card mdl-shadow--3dp" onclick="location.href='/cyber/hearthstone'">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__event">하스스톤</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-event-card__kartrider mdl-card mdl-shadow--3dp" onclick="location.href='/cyber/kartrider'">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__event">카트라이더</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-event-card__heroes_of_the_storm mdl-card mdl-shadow--3dp" onclick="location.href='/cyber/heroes_of_the_storm'">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__event">히어로즈 오브 더 스톰</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-event-card__overwatch mdl-card mdl-shadow--3dp" onclick="location.href='/cyber/overwatch'">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__event">오버워치</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="science-war-supporters-section">
+        <div class="science-war-supporters-section-text">
+          <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">2016년 경기 결과</div>
+          <div class="science-war-card-container mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-event-card__kartrider mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__event">카트라이더</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+              <div class="science-war-match-postech-score mdl-card mdl-shadow--3dp">
+                <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>2</span></div></div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+              <div class="science-war-match-kaist-score mdl-card mdl-shadow--3dp">
+                <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>7</span></div></div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-event-card__starcraft2 mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__event">스타크래프트2</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+              <div class="science-war-match-postech-score mdl-card mdl-shadow--3dp">
+                <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>2</span></div></div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+              <div class="science-war-match-kaist-score mdl-card mdl-shadow--3dp">
+                <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>3</span></div></div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-event-card__hearthstone mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__event">하스스톤</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+              <div class="science-war-match-postech-score mdl-card mdl-shadow--3dp">
+                <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>0</span></div></div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+              <div class="science-war-match-kaist-score mdl-card mdl-shadow--3dp">
+                <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>3</span></div></div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-event-card__overwatch mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__event">오버워치</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+              <div class="science-war-match-postech-score mdl-card mdl-shadow--3dp">
+                <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>1</span></div></div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+              <div class="science-war-match-kaist-score mdl-card mdl-shadow--3dp">
+                <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>2</span></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}
+
+{% block script %}
+  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+{% endblock %}

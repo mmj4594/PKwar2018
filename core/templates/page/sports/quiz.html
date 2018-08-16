@@ -1,0 +1,247 @@
+{% extends "page/layout.html" %}
+{% load staticfiles %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/sports/quiz.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="science-war-content mdl-layout__content">
+      <a name="top"></a>
+
+      <div class="science-war-supporters-section">
+        <div class="science-war-supporters-section-text">
+          <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">과학퀴즈 선수단장 박진만 (수학 16)</div>
+          <div class="science-war-card-container mdl-grid">
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--1-col-phone"></div>
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-player-captain-image mdl-card mdl-shadow--3dp"></div>
+            </div>
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+            </div>
+            <p class="mdl-typography--font-light science-war-event-text">
+              안녕하세요. 과학퀴즈 단장 수학과 16학번 박진만입니다.
+              과학퀴즈는 작년까지 3연승을 거둔 포카전의 소리없는 에이스입니다.
+              올해도 반드시 승리를 거머쥐고 포스텍의 연승에 당당한 축으로 자리매김하기 위해 저희 선수들은 이번 여름에도 열심히 준비하였습니다.
+              아무쪼록 포카전과 과학퀴즈의 승리를 위해 많은 성원 부탁드리겠습니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="science-war-supporters-section-text">
+          <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">장소 및 시간</div>
+          <div class="science-war-card-container mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+              <div id="map_canvas"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="science-war-match-section">
+          <div class="science-war-match-title mdl-typography--display-1-color-contrast">선수단</div>
+          <div class="science-war-card-container mdl-grid">
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__player">박진만 수학16</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__player">최동준 수학13</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__player">김도형 컴공14</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__player">마진혁 화학15</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__player">박성빈 물리15</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__player">허태양 생명16</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="science-war-match-section">
+          <div class="science-war-match-title mdl-typography--display-1-color-contrast">경기 전적</div>
+          <div class="science-war-card-container mdl-grid">
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-match-kaist-win mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__year">2002</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-match-postech-win mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__year">2003</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-match-postech-win mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__year">2004</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-match-kaist-win mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__year">2005</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-match-kaist-win mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__year">2006</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-match-kaist-win mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__year">2007</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-match-postech-win mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__year">2008</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-match-postech-win mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__year">2010</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-match-postech-win mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__year">2011</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-match-kaist-win mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__year">2012</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-match-kaist-win mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__year">2013</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-match-postech-win mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__year">2014</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-match-postech-win mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__year">2015</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-match-postech-win mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__year">2016</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}
+
+{% block script %}
+  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxVLZtAE6N0fpOa7JIN5b3AHaxV49fMKo"></script>
+  <script type="text/javascript">
+  function initialize() {
+    var centerLating = new google.maps.LatLng(36.372402,127.361610);
+
+    var buildingLatlng= new google.maps.LatLng(36.372402,127.361610);
+
+    var myOptions = {
+        zoom: 15,
+        center: centerLating
+    };
+
+    var contentString = '<div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">과학퀴즈<p>카이스트 스포츠컴플렉스<br>오후 2:00 ~ 오후 3:30</p></div>';
+
+    var infowindow = new google.maps.InfoWindow({content: contentString});
+
+    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+    var marker = new google.maps.Marker({
+        position: buildingLatlng,
+        map: map,
+        title:"카이스트 스포츠컴플렉스"
+    });
+
+    infowindow.open(map, marker);
+
+    marker.addListener('click', function() {
+      infowindow.open(map, marker);
+    });
+  }
+
+  document.getElementsByTagName("body").onload = initialize();
+  </script>
+{% endblock %}

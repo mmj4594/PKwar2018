@@ -1,0 +1,139 @@
+{% extends "page/layout.html" %}
+{% load staticfiles %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="science-war-content mdl-layout__content">
+      <a name="top"></a>
+      <div class="science-war-be-together-section mdl-typography--text-center">
+        <div class="logo-font android-slogan"><!--포스텍카이스트학생대제전--></div>
+        <div class="logo-font android-sub-slogan"><!--POSTECH-KAIST Science War--></div>
+      </div>
+
+      <div class="science-war-match-section">
+        <div class="science-war-match-section">
+          <div class="science-war-card-container mdl-grid">
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="{% static 'images/postech-kaist.png' %}">
+              </div>
+              <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">포카전이란?</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">2017년에도 돌아온 포카전! 올해에는 과연 어떤 경기들이 우리를 맞이할까요?</span>
+              </div>
+              <div class="mdl-card__actions">
+                <a class="science-war-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="/about">
+                  더 알아보기
+                  <i class="material-icons">chevron_right</i>
+                </a>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="{% static 'images/postech.png' %}">
+              </div>
+              <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">나도 서포터즈!</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">올해에도 포카전의 열기를 돋아주시기 위해 참가해주시는 서포터즈 분들을 위한 상품과 행사에는 어떤 것들이 있을까요?</span>
+              </div>
+              <div class="mdl-card__actions">
+                <a class="science-war-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="/supporters">
+                  더 알아보기
+                  <i class="material-icons">chevron_right</i>
+                </a>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="{% static 'images/kaist.png' %}">
+              </div>
+              <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">여기는 어디야?</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">올해의 포카전은 카이스트에서 열립니다. 포스텍 여러분들이 길을 잃지 않도록 준비했습니다. 길을 잃으셨다면 여기로 들어가보세요!</span>
+              </div>
+              <div class="mdl-card__actions">
+                <a class="science-war-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="/map">
+                  더 알아보기
+                  <i class="material-icons">chevron_right</i>
+                </a>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="{% static 'images/badminton.png' %}">
+              </div>
+              <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">새로운 종목</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">올해에는 새로운 종목인 배드민턴이 추가됩니다. 새로운 종목인 배드민턴에 대해서 알아보세요!</span>
+              </div>
+              <div class="mdl-card__actions">
+                <a class="science-war-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="/sports/badminton">
+                  더 알아보기
+                  <i class="material-icons">chevron_right</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="science-war-cyber-section">
+        <div class="science-war-cyber-band">
+          <div class="science-war-cyber-band-text">
+            <div class="mdl-typography--display-2 mdl-typography--font-thin">최고의 게이머를 가리다! 사이버포카전</div>
+            <p class="mdl-typography--headline mdl-typography--font-thin">
+              작년에 이어 올해에도 실시되는 사이버포카전! 작년의 설욕을 할 수 있을까요? 올해에는 더 많은 종목으로 여러분을 찾아갑니다.
+            </p>
+            <p>
+              <a class="mdl-typography--font-regular mdl-typography--text-uppercase android-alt-link" href="/cyber">
+                더 알아보기<i class="material-icons">chevron_right</i>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="science-war-supporters-section">
+        <div class="science-war-supporters-section-text">
+          <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">포카전을 더욱 뜨겁게! 포카전 서포터즈</div>
+          <p class="mdl-typography--font-light">
+            서포터즈는 행사 중 다양한 혜택을 받을 수 있습니다. 서포터즈가 아니라면 그 누구도 받을 수 없는 서포터즈 물품! 여러분도 받아가세요.
+            <br>
+            <a href="/supporters" class="science-war-link mdl-typography--font-light">더 알아보기<i class="material-icons">chevron_right</i></a>
+          </p>
+        </div>
+        <div class="science-war-supporters-section-image"></div>
+      </div>
+      <div class="science-war-puzzle-section">
+        <div class="science-war-puzzle-band">
+          <div class="science-war-puzzle-band-text">
+            <div class="mdl-typography--display-2 mdl-typography--font-thin">생각 그 한계에 도전하다! 미궁게임</div>
+            <p class="mdl-typography--headline mdl-typography--font-thin">
+              우리의 머리의 한계에 도전하는 미궁 퍼즐, 올해에도 그 전통은 이어집니다!
+            </p>
+            <p>
+              <a class="mdl-typography--font-regular mdl-typography--text-uppercase android-alt-link" href="http://labyrinth.postech.ac.kr">
+                더 알아보기<i class="material-icons">chevron_right</i>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+{% endblock %}
+
+{% block script %}
+  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+{% endblock %}

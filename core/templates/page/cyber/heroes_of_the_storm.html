@@ -1,0 +1,106 @@
+{% extends "page/layout.html" %}
+{% load staticfiles %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/cyber/heroes_of_the_storm.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="science-war-content mdl-layout__content">
+      <a name="top"></a>
+
+      <div class="science-war-supporters-section">
+        <div class="science-war-supporters-section-text">
+          <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">히어로즈 오브 더 스톰</div>
+          <p class="left-paragraph mdl-typography--font-light">
+            고급레스토랑스로 유명한 그 게임이 사이버 포카전에 왔다!
+            블리자드의 캐릭터들이 블리자드의 여러 배경에서 서로 전투를 벌이는 히어로즈 오브 더 스톰에서 과연 과연 승자는 누가 될까요?
+          </p>
+          <div class="mdl-card__actions">
+            <a class="science-war-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="http://kr.battle.net/heroes/ko/">
+              자세히 알아보기
+              <i class="material-icons">chevron_right</i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+        <div class="science-war-supporters-section">
+          <div class="science-war-supporters-section-text">
+            <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">경기 규칙</div>
+            <p class="left-paragraph mdl-typography--font-light" style="text-align: center">
+              5판 3선승제<br>
+              사용자 지정 게임의 대회 선발전 룰을 따름<br>
+            </p>
+          </div>
+        </div>
+
+        <div class="science-war-supporters-section">
+          <div class="science-war-supporters-section-text">
+            <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">참가 선수</div>
+            <div class="science-war-card-container mdl-grid">
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+                  <div class="mdl-card__actions">
+                    <span class="science-war-card-image__player">문선웅 컴공17</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+                  <div class="mdl-card__actions">
+                    <span class="science-war-card-image__player">김상수 생명13</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+                  <div class="mdl-card__actions">
+                    <span class="science-war-card-image__player">신용원 컴공13</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+                  <div class="mdl-card__actions">
+                    <span class="science-war-card-image__player">신승현 물리14</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+                  <div class="mdl-card__actions">
+                    <span class="science-war-card-image__player">김지훈 물리14</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="science-war-supporters-section">
+          <div class="science-war-supporters-section-text">
+            <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">신설종목</div>
+            <div class="science-war-card-container mdl-grid">
+              <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--1-col-phone"></div>
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="science-war-new-game mdl-card mdl-shadow--3dp"></div>
+              </div>
+              <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+              </div>
+              <p class="left-paragraph mdl-typography--font-light science-war-event-text">
+                히어로즈 오브 더 스톰 종목의 경우 사이버 포카전에서 올해 처음으로 선보이는 종목입니다.
+                고급레스토랑스, 시공의 폭풍 등 다양한 별명을 가지고 있는 이 게임의 강자는 과연 누가 될까요?
+              </p>
+            </div>
+          </div>
+        </div>
+{% endblock %}
+
+{% block script %}
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+{% endblock %}

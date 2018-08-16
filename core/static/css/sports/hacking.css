@@ -1,0 +1,680 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+body {
+  margin: 0;
+}
+
+/* Disable ugly boxes around images in IE10 */
+a img{
+  border: 0px;
+}
+
+::-moz-selection {
+  background-color: #6ab344;
+  color: #fff;
+}
+
+::selection {
+  background-color: #6ab344;
+  color: #fff;
+}
+
+.android-search-box .mdl-textfield__input {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.science-war-header .mdl-menu__container {
+  z-index: 50;
+  margin: 0 !important;
+}
+
+
+.mdl-textfield--expandable {
+  width: auto;
+}
+
+.android-fab {
+  position: absolute;
+  right: 20%;
+  bottom: -26px;
+  z-index: 3;
+  background: #64ffda !important;
+  color: black !important;
+}
+
+.science-war-mobile-title {
+  display: none !important;
+}
+
+
+.logo-image {
+  height: 50px;
+  width: 200px;
+}
+
+.mdl-layout__drawer-button {
+  color: #222222;
+}
+
+.science-war-header {
+  overflow: visible;
+  background-color: white;
+}
+
+  .science-war-header .material-icons {
+    color: #767777 !important;
+  }
+
+  .science-war-header .mdl-layout__drawer-button {
+    background: transparent;
+    color: #767777;
+  }
+
+  .science-war-header .mdl-navigation__link {
+    color: #757575;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .science-war-navigation-container {
+    /* Simple hack to make the overflow happen to the left instead... */
+    direction: rtl;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 500px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .science-war-navigation {
+    /* ... and now make sure the content is actually LTR */
+    direction: ltr;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 800px;
+  }
+
+  .android-search-box.is-focused + .science-war-navigation-container {
+    opacity: 0;
+    width: 100px;
+  }
+
+
+  .science-war-navigation .mdl-navigation__link {
+    display: inline-block;
+    height: 60px;
+    line-height: 68px;
+    background-color: transparent !important;
+    border-bottom: 4px solid transparent;
+  }
+
+    .science-war-navigation .mdl-navigation__link:hover {
+      border-bottom: 4px solid #c80150;
+    }
+
+  .android-search-box {
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .android-more-button {
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+
+.science-war-drawer {
+  border-right: none;
+}
+
+  .science-war-drawer-separator {
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 8px 0;
+  }
+
+  .science-war-drawer .mdl-navigation__link.mdl-navigation__link {
+    font-size: 14px;
+    color: #757575;
+  }
+
+  .science-war-drawer span.mdl-navigation__link.mdl-navigation__link {
+    color: #c80150;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  #cyber {
+    color: #c80150;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .science-war-drawer .mdl-layout-title {
+    position: relative;
+    background: #6ab344;
+    height: 160px;
+  }
+
+    .science-war-drawer .android-logo-image {
+      position: absolute;
+      bottom: 16px;
+    }
+
+.science-war-be-together-section {
+  position: relative;
+  height: 800px;
+  width: auto;
+  background-color: #f3f3f3;
+  background: url('../../images/ponix.png') center 30% no-repeat;
+  background-size: cover;
+}
+
+.science-war-postech-win {
+  background-color: ##c80150
+}
+
+.logo-font {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1;
+  color: #EEEEEE;
+  font-weight: 500;
+}
+
+.android-slogan {
+  font-size: 60px;
+  padding-top: 160px;
+}
+
+.android-sub-slogan {
+  font-size: 21px;
+  padding-top: 24px;
+}
+
+.android-create-character {
+  font-size: 21px;
+  padding-top: 400px;
+}
+
+  .android-create-character a {
+    text-decoration: none;
+    color: #767777;
+    font-weight: 300;
+  }
+
+.android-screen-section {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.android-screens {
+  text-align: right;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.android-screen {
+  text-align: center;
+}
+
+.android-screen .science-war-link {
+  margin-top: 16px;
+  display: block;
+  z-index: 2;
+}
+
+.android-image-link {
+  text-decoration: none;
+}
+
+.android-wear {
+  display: inline-block;
+  width: 160px;
+  margin-right: 32px;
+}
+
+  .android-wear .android-screen-image {
+    width: 40%;
+    z-index: 1;
+  }
+
+
+.android-phone {
+  display: inline-block;
+  width: 64px;
+  margin-right: 48px;
+}
+
+  .android-phone .android-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+
+.android-tablet {
+  display: inline-block;
+  width: 110px;
+  margin-right: 64px;
+}
+
+  .android-tablet .android-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+  .android-tablet .science-war-link {
+    display: block;
+    z-index: 2;
+  }
+
+
+.android-tv {
+  display: inline-block;
+  width: 300px;
+  margin-right: 80px;
+}
+
+  .android-tv .android-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+
+.android-auto {
+  display: inline-block;
+  width: 300px;
+  overflow: hidden;
+}
+
+  .android-auto .android-screen-image {
+    display: block;
+    height: 300px;
+    z-index: 1;
+  }
+
+
+.science-war-cyber-section {
+  position: relative;
+  background: url('../../images/cyber.jpg') center top no-repeat;
+  background-size: cover;
+  height: 800px;
+}
+
+.science-war-puzzle-section {
+  position: relative;
+  background: url('../../images/puzzle.jpg') center top no-repeat;
+  background-size: cover;
+  height: 800px;
+}
+
+.science-war-cyber-band {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #37474f;
+}
+
+.science-war-puzzle-band {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #222222;
+}
+
+.science-war-cyber-band-text, .science-war-puzzle-band-text {
+  max-width: 800px;
+  margin-left: 25%;
+  padding: 24px;
+  text-align: left;
+  color: white;
+}
+
+  .science-war-cyber-band-text, .science-war-puzzle-band-text p {
+    padding-top: 8px;
+  }
+
+.science-war-link {
+  text-decoration: none;
+  color: #8bc34a !important;
+}
+
+  .science-war-link:hover {
+    color: #7cb342 !important;
+  }
+
+  .science-war-link .material-icons {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+  }
+
+.android-alt-link {
+  text-decoration: none;
+  color: #64ffda !important;
+  font-size: 16px;
+}
+
+  .android-alt-link:hover {
+    color: #00bfa5 !important;
+  }
+
+  .android-alt-link .material-icons {
+    position: relative;
+    top: 6px;
+  }
+
+.science-war-supporters-section {
+  text-align: center;
+}
+
+.science-war-supporters-section-text {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 80px 16px 0 16px;
+}
+
+  .science-war-supporters-section-text p {
+    padding-top: 16px;
+  }
+
+.science-war-supporters-section-image {
+  background: url('../../images/devices.jpg') center top no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+.science-war-match-section {
+  padding: 80px 0;
+  max-width: 1044px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.science-war-captain-section {
+  padding: 80px 0;
+  max-width: 1044px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  .science-war-match-section .android-section-title {
+    margin-left: 12px;
+    padding-bottom: 24px;
+  }
+
+.science-war-card-container {
+}
+
+  .science-war-card-container .mdl-card__media {
+    overflow: hidden;
+    background: transparent;
+  }
+
+    .science-war-card-container .mdl-card__media img {
+      width: 100%;
+    }
+
+  .science-war-card-container .mdl-card__title {
+    background: transparent;
+    height: auto;
+  }
+
+  .science-war-card-container .mdl-card__title-text {
+    color: black;
+    height: auto;
+  }
+
+  .science-war-card-container .mdl-card__supporting-text {
+    height: auto;
+    color: black;
+    padding-bottom: 56px;
+  }
+
+  .science-war-card-container .mdl-card__actions {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .science-war-card-container .mdl-card__actions a {
+    border-top: none;
+    font-size: 16px;
+  }
+
+.science-war-footer {
+  background-color: #fafafa;
+  position: relative;
+}
+
+  .science-war-footer a:hover {
+    color: #8bc34a;
+  }
+
+  .science-war-footer .mdl-mega-footer--top-section::after {
+    border-bottom: none;
+  }
+
+  .science-war-footer .mdl-mega-footer--middle-section::after {
+    border-bottom: none;
+  }
+
+  .science-war-footer .mdl-mega-footer--bottom-section {
+    position: relative;
+  }
+
+  .science-war-footer .mdl-mega-footer--bottom-section a {
+    margin-right: 2em;
+  }
+
+  .science-war-footer .mdl-mega-footer--right-section a .material-icons {
+    position: relative;
+    top: 6px;
+  }
+
+
+.science-war-link-menu:hover {
+  cursor: pointer;
+}
+
+
+/**** Mobile layout ****/
+@media (max-width: 900px) {
+  .science-war-navigation-container {
+    display: none;
+  }
+
+  .science-war-title {
+    display: none !important;
+  }
+
+  .science-war-mobile-title {
+    display: block !important;
+    position: absolute;
+    left: 50px;
+    top: 0px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
+     consecutive "+" operators in some cases. Therefore, we need to use both
+     here to cover all the bases. */
+  .android.android-search-box.is-focused ~ .science-war-mobile-title,
+  .android-search-box.is-focused + .science-war-navigation-container + .science-war-mobile-title {
+    opacity: 0;
+  }
+
+  .android-more-button {
+    display: none;
+  }
+
+  .android-search-box.is-focused {
+    width: calc(100% - 48px);
+  }
+
+  .android-search-box .mdl-textfield__expandable-holder {
+    width: 100%;
+  }
+
+  .science-war-be-together-section {
+    height: 350px;
+  }
+
+  .android-slogan {
+    font-size: 26px;
+    margin: 0 16px;
+    padding-top: 24px;
+  }
+
+  .android-sub-slogan {
+    font-size: 16px;
+    margin: 0 16px;
+    padding-top: 8px;
+  }
+
+  .android-create-character {
+    padding-top: 200px;
+    font-size: 16px;
+  }
+
+  .android-create-character img {
+    height: 12px;
+  }
+
+  .android-fab {
+    display: none;
+  }
+
+  .science-war-cyber-band-text, .science-war-puzzle-band-text {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .science-war-footer .mdl-mega-footer--bottom-section {
+    display: none;
+  }
+}
+
+.science-war-match-postech-win.mdl-card {
+  width: 100%;
+  padding-top: 100%;
+  background: url('../../images/postech.png') center / cover;
+}
+
+.science-war-match-kaist-win.mdl-card {
+  width: 100%;
+  padding-top: 100%;
+  background: url('../../images/kaist.png') center / cover;
+}
+
+.science-war-match-poka-draw.mdl-card {
+  width: 100%;
+  padding-top: 100%;
+  background: url('../../images/poka.jpg') center / cover;
+}
+
+.science-war-match-postech-win > .mdl-card__actions {
+  height: 40px;
+  padding: 10px;
+  background: rgba(200, 1, 80, 0.8);
+}
+
+.science-war-match-kaist-win > .mdl-card__actions {
+  height: 40px;
+  padding: 10px;
+  background: rgba(20, 135, 200, 0.8);
+}
+
+.science-war-match-poka-draw > .mdl-card__actions {
+  height: 40px;
+  padding: 10px;
+  background: rgba(110, 68, 140, 0.8);
+}
+
+.science-war-card-image__year {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.science-war-player-card.mdl-card {
+  width: 100%;
+  padding-bottom: 100%;
+  background: url('../../images/hacking-player.png') center / cover;
+}
+
+.science-war-player-card > .mdl-card__actions {
+  height: 40px;
+  padding: 10px;
+  background: rgba(173, 139, 121, 0.8);
+}
+
+.science-war-card-image__player {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.science-war-player-captain-image {
+  width: 100%;
+  padding-top: 100%;
+  background: url('../../images/hacking-captain.jpg') center / cover;
+}
+
+.mdl-cell--4-col-phone > .science-war-player-captain-image {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%
+}
+
+.science-war-event-text {
+  text-align: justify;
+}
+
+.mdl-card {
+  min-height: 100px;
+}
+
+.science-war-icon {
+  background: url('../../images/logo.png') center/cover;
+}
+
+.poapper-icon {
+  background: url('../../images/poapper_logo.png') center/cover;
+}
+
+.pbs-icon {
+  background: url('../../images/pbs_logo.png') center/cover;
+}
+
+#map_canvas {
+  width: 100%;
+  padding-top: 100%;
+}
+
+.mdl-layout__header{
+  background-color: rgba(200, 1, 80, 0.8) !important;
+}
