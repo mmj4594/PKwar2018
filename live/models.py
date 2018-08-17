@@ -26,3 +26,4 @@ class Result(models.Model):
     p_score = models.IntegerField(default=0)
     k_score = models.IntegerField(default=0)
     is_end = models.BooleanField(default=False)
+    is_live = models.BooleanField(default=False)

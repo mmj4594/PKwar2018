@@ -633,16 +633,6 @@ a img{
   background: rgba(20, 135, 200, 0.8);
 }
 
-.send-button-postech {
-  width: 100%;
-  background: rgba(200, 1, 80, 0.8);
-}
-
-.send-button-kaist {
-  width: 100%;
-  background: rgba(20, 135, 200, 0.8);
-}
-
 .postech-title {
   font-size: 30px;
   font-family: 'Teko', sans-serif;

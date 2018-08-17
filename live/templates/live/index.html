@@ -1,4 +1,4 @@
-{% extends "chat/layout.html" %}
+{% extends "live/layout.html" %}
 {% load staticfiles %}
 
 {% block css %}
@@ -68,6 +68,7 @@
 
         <!-- Not reloaded(chatting) -->
         {% for livematch in livematch %}
+          {% if livematch.which_video != "" %}
           <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
             <div class="science-war-player-card mdl-card mdl-shadow--3dp">
               <div class="vedio-container">
@@ -75,6 +76,7 @@
               </div>
             </div>
           </div>
+          {% endif %}
 
           {% if livematch.which_chat != "" %}
           <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
@@ -132,13 +134,14 @@
         </div>
       </div>
       {% endif %}
-</div>
+    </div>
 
 
 
 <!-- Finished match -->
 <div class="science-war-supporters-section">
   <div id="finished_match">
+    <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">종료된 경기</div>
     {% for matches in matches reversed %}
     <div id="{{matches.match_name}}">
       <div class="science-war-supporters-section-text">

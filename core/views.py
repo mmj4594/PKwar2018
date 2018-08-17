@@ -1,11 +1,19 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, HttpResponseRedirect, HttpResponseNotFound, Http404
+from live.models import LiveMatch, Result
 # Create your views here.
 
 def to_home(request):
     return redirect('/home/')
 def home(request):
-    return render(request, "page/home.html")
+    livematch = LiveMatch.objects.all()
+    result = Result.objects.all()
+    context = {
+        'livematch': livematch,
+        'result': result[0],
+    }
+    return render(request, "page/home.html", context)
+
 def about(request):
     return render(request, "page/about.html")
 def messages(request):

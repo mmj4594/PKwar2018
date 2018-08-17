@@ -12,7 +12,7 @@ def index(request):
         'matches': matches,
         'result': result[0],
     }
-    return render(request, "chat/index.html", context)
+    return render(request, "live/index.html", context)
 
 
 def reload_match(request):
@@ -20,4 +20,4 @@ def reload_match(request):
     context = {
         'livematch': livematch,
     }
-    return render(request, 'chat/reload_match.html', context)
+    return render(request, 'live/reload_match.html', context)
