@@ -12,3 +12,4 @@
 
 ### pip list
 * django==2.1
+* pillow
