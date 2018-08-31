@@ -466,7 +466,7 @@ a img{
   }
 
 .science-war-footer {
-  background-color: #fafafa;
+  background-color: #fff;
   position: relative;
 }
 
@@ -755,8 +755,6 @@ a img{
 }
 
 .science-war-event-card__baseball.mdl-card {
-  width: 150px;
-  height: 150px;
   background: url('../../images/baseball.png') center / cover;
 }
 
@@ -768,8 +766,6 @@ a img{
 }
 
 .science-war-event-card__esports.mdl-card {
-  width: 150px;
-  height: 150px;
   background: url('../../images/esports.png') center / cover;
 }
 
@@ -781,8 +777,6 @@ a img{
 }
 
 .science-war-event-card__quiz.mdl-card {
-  width: 150px;
-  height: 150px;
   background: url('../../images/quiz.png') center / cover;
 }
 
@@ -794,8 +788,6 @@ a img{
 }
 
 .science-war-event-card__hacking.mdl-card {
-  width: 150px;
-  height: 150px;
   background: url('../../images/hacking.png') center / cover;
 }
 
@@ -807,8 +799,6 @@ a img{
 }
 
 .science-war-event-card__ai.mdl-card {
-  width: 150px;
-  height: 150px;
   background: url('../../images/ai.png') center / cover;
 }
 
@@ -820,8 +810,6 @@ a img{
 }
 
 .science-war-event-card__badminton.mdl-card {
-  width: 150px;
-  height: 150px;
   background: url('../../images/badminton.png') center / cover;
 }
 

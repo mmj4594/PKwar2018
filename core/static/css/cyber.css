@@ -467,7 +467,7 @@ a img{
   }
 
 .science-war-footer {
-  background-color: #fafafa;
+  background-color: #fff;
   position: relative;
 }
 
@@ -785,6 +785,19 @@ a img{
   height: 40px;
   padding: 10px;
   background: rgba(92, 95, 102, 0.8);
+  text-align: center;
+}
+
+.science-war-event-card__battlegrounds.mdl-card {
+  width: 100%;
+  padding-top: 100%;
+  background: url('../images/battlegrounds_player.png') center / cover;
+}
+
+.science-war-event-card__battlegrounds > .mdl-card__actions {
+  height: 40px;
+  padding: 10px;
+  background: rgba(230, 230, 170, 0.6);
   text-align: center;
 }
 

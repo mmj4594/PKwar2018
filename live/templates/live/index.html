@@ -46,7 +46,7 @@
               <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
                 <div class="science-war-event-card__{{livematch.match_name}} mdl-card mdl-shadow--3dp">
                   <div class="mdl-card__actions">
-                    <span class="science-war-card-image__event">{{livematch.게임명}}</span>
+                    <span class="science-war-card-image__event">{{livematch.경기명}}</span>
                   </div>
                 </div>
               </div>
@@ -139,8 +139,9 @@
 
 
 <!-- Finished match -->
-<div class="science-war-supporters-section">
-  <div id="finished_match">
+
+<div id="finished_match">
+  <div class="science-war-supporters-section">
     <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">종료된 경기</div>
     {% for matches in matches reversed %}
     <div id="{{matches.match_name}}">

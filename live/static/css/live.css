@@ -1021,3 +1021,7 @@ table{
 .mdl-layout__header{
   background-color: rgba(200, 1, 80, 0.8) !important;
 }
+
+#finished_match{
+  margin-top: 80px;
+}

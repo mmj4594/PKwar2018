@@ -466,7 +466,7 @@ a img{
   }
 
 .science-war-footer {
-  background-color: #fafafa;
+  background-color: #fff;
   position: relative;
 }
 
@@ -641,7 +641,7 @@ a img{
 .science-war-player-captain-image {
   width: 100%;
   padding-top: 100%;
-  background: url('../../images/ai-captain.png') center / cover;
+  background: url('../../images/ai-captain.jpg') center / cover;
 }
 
 .mdl-cell--4-col-phone > .science-war-player-captain-image {

@@ -18,11 +18,14 @@ urlpatterns = [
     url(r'^sports/hacking/$', views.hacking),
 
     url(r'^cyber/$', views.cyber),
-    url(r'^cyber/starcraft/$', views.starcraft),    url(r'^cyber/kartrider/$', views.kartrider),    url(r'^cyber/overwatch/$', views.overwatch),    url(r'^cyber/heroes_of_the_storm/$', views.heroes_of_the_storm),
+    url(r'^cyber/starcraft/$', views.starcraft),
+    url(r'^cyber/kartrider/$', views.kartrider),
+    url(r'^cyber/overwatch/$', views.overwatch),
+    url(r'^cyber/heroes_of_the_storm/$', views.heroes_of_the_storm),
     url(r'^cyber/hearthstone/$', views.hearthstone),
+    url(r'^cyber/battlegrounds/$', views.battlegrounds),
 
     url(r'^supporters/$', views.supporters),
     url(r'^schedule/$', views.schedule),
     url(r'^poapper/$', views.poapper),
-    url(r'^booth/$', views.booth),
 ]

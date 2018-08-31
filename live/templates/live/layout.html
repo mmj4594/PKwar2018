@@ -82,7 +82,7 @@ limitations under the License
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
           <!-- Title -->
-          <span class="mdl-layout-title">2018 포카전</span>
+          <span class="mdl-layout-title">Live</span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation. We hide it in small screens. -->
@@ -90,7 +90,7 @@ limitations under the License
             <a class="mdl-navigation__link" href="/about">포카전이란?</a>
             <a class="mdl-navigation__link" href="/schedule">일정</a>
             <a class="mdl-navigation__link" href="http://labyrinth.postech.ac.kr:1257">미궁</a>
-            <a class="mdl-navigation__link" href="/sports/badminton">신설 종목</a>
+            <a class="mdl-navigation__link" href="/live">Live</a>
           </nav>
         </div>
       </header>
@@ -117,16 +117,16 @@ limitations under the License
           <div class="science-war-drawer-separator"></div>
             <span class="mdl-navigation__link" id="cyber">사이버포카전</span>
             <a class="mdl-navigation__link" href="/cyber">사이버포카전이란?</a>
-            <a class="mdl-navigation__link" href="/cyber/starcraft">스타크래프트</a>
+            <a class="mdl-navigation__link" href="/cyber/starcraft">스타크래프트1</a>
             <a class="mdl-navigation__link" href="/cyber/hearthstone">하스스톤</a>
             <a class="mdl-navigation__link" href="/cyber/kartrider">카트라이더</a>
             <a class="mdl-navigation__link" href="/cyber/heroes_of_the_storm">히어로즈 오브 더 스톰</a>
             <a class="mdl-navigation__link" href="/cyber/overwatch">오버워치</a>
+            <a class="mdl-navigation__link" href="/cyber/battlegrounds">배틀그라운드</a>
           <div class="science-war-drawer-separator"></div>
             <span class="mdl-navigation__link" id="cyber">서포터즈</span>
             <a class="mdl-navigation__link" href="/supporters">포카전 서포터즈</a>
-            <a class="mdl-navigation__link" href="/booth">부스</a>
-            <a class="mdl-navigation__link" href="http://labyrinth.postech.ac.kr:1257">미궁</a>
+            <a class="mdl-navigation__link" href="http://labyrinth.postech.ac.kr:5000/">미궁</a>
         </nav>
       </div>
       <main class="mdl-layout__content">
@@ -155,12 +155,22 @@ limitations under the License
           </div>
         </div>
 
-        <div class="mdl-mega-footer--middle-section">
+        <div class="mdl-mega-footer--middle-section" style="float: left">
           <p class="mdl-typography--font-light">© 2018 포카전준비위원회<br>Powered by PoApper</p>
+        </div>
+        <div class="mdl-mega-footer--middle-section" style="float:right;">
+          <p class="mdl-typography--font-light" style="text-align: right;">Server by<br>
+            <img src="{% static 'images/naverD2.png' %}" height="80px">
+          </p>
         </div>
       </footer>
     </div>
   </div>
+
+
+
 {% block script %}{% endblock %}
+<script type="text/javascript" src="{% static 'js/reload.js' %}"></script>
 </body>
 </html>
+

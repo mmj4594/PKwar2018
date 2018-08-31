@@ -6,7 +6,6 @@
 {% endblock %}
 
 {% block content %}
-    <div class="science-war-content mdl-layout__content">
       <a name="top"></a>
 
       <div class="science-war-supporters-section">
@@ -250,6 +249,14 @@
                 </div>
               </div>
             </div>
+
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-match-kaist-win mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__year">2017</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -260,16 +267,16 @@
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxVLZtAE6N0fpOa7JIN5b3AHaxV49fMKo"></script>
   <script type="text/javascript">
   function initialize() {
-    var centerLating = new google.maps.LatLng(36.372402,127.361610);
+    var centerLating = new google.maps.LatLng(36.018669,129.323259);
 
-    var buildingLatlng= new google.maps.LatLng(36.372402,127.361610);
+    var buildingLatlng= new google.maps.LatLng(36.018669,129.323259);
 
     var myOptions = {
         zoom: 15,
         center: centerLating
     };
 
-    var contentString = '<div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">농구<p>카이스트 스포츠컴플렉스<br>오후 5:00 ~ 오후 7:00</p></div>';
+    var contentString = '<div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">농구<p>포스텍 체육관<br>9월 15일<br>오후 3:00 ~ 오후 5:00</p></div>';
 
     var infowindow = new google.maps.InfoWindow({content: contentString});
 
@@ -277,7 +284,7 @@
     var marker = new google.maps.Marker({
         position: buildingLatlng,
         map: map,
-        title:"카이스트 스포츠컴플렉스"
+        title:"포스텍 체육관"
     });
 
     infowindow.open(map, marker);

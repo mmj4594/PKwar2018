@@ -46,12 +46,13 @@ limitations under the License
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-  <script src="{% static 'js/jquery-3.2.1.min.js' %}"> </script>
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"> </script>
+
 
 
 
 {% block css %}{% endblock %}
-
+  <link rel="stylesheet" href="{% static 'css/layout.css' %}">
   <style>
   #view-source {
     position: fixed;
@@ -83,15 +84,15 @@ limitations under the License
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
           <!-- Title -->
-          <span class="mdl-layout-title">2018 포카전</span>
+          <span class="mdl-layout-title">{{page}}</span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation. We hide it in small screens. -->
           <nav class="mdl-navigation mdl-layout--large-screen-only">
             <a class="mdl-navigation__link" href="/about">포카전이란?</a>
             <a class="mdl-navigation__link" href="/schedule">일정</a>
-            <a class="mdl-navigation__link" href="http://labyrinth.postech.ac.kr:1257">미궁</a>
-            <a class="mdl-navigation__link" href="/sports/badminton">신설 종목</a>
+            <a class="mdl-navigation__link" href="http://labyrinth.postech.ac.kr:5000/">미궁</a>
+            <a class="mdl-navigation__link" href="/live">Live</a>
           </nav>
         </div>
       </header>
@@ -118,19 +119,116 @@ limitations under the License
           <div class="science-war-drawer-separator"></div>
             <span class="mdl-navigation__link" id="cyber">사이버포카전</span>
             <a class="mdl-navigation__link" href="/cyber">사이버포카전이란?</a>
-            <a class="mdl-navigation__link" href="/cyber/starcraft">스타크래프트</a>
+            <a class="mdl-navigation__link" href="/cyber/starcraft">스타크래프트1</a>
             <a class="mdl-navigation__link" href="/cyber/hearthstone">하스스톤</a>
             <a class="mdl-navigation__link" href="/cyber/kartrider">카트라이더</a>
             <a class="mdl-navigation__link" href="/cyber/heroes_of_the_storm">히어로즈 오브 더 스톰</a>
             <a class="mdl-navigation__link" href="/cyber/overwatch">오버워치</a>
+            <a class="mdl-navigation__link" href="/cyber/battlegrounds">배틀그라운드</a>
           <div class="science-war-drawer-separator"></div>
             <span class="mdl-navigation__link" id="cyber">서포터즈</span>
             <a class="mdl-navigation__link" href="/supporters">포카전 서포터즈</a>
-            <a class="mdl-navigation__link" href="/booth">부스</a>
-            <a class="mdl-navigation__link" href="http://labyrinth.postech.ac.kr:1257">미궁</a>
+            <a class="mdl-navigation__link" href="http://labyrinth.postech.ac.kr:5000/">미궁</a>
         </nav>
       </div>
     </div>
+
+
+
+
+
+
+    <!--live scoreboard-->
+    <div class="science-war-content mdl-layout__content">
+      {% block home %} {% endblock %}
+      <div class="science-war-supporters-section"> 
+        <div class="science-war-supporters-section-text science-war-scoreboard">
+          <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">전체 점수</div>
+          <div class="science-war-card-container mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-event-card__result mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__event"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+              <div class="science-war-match-postech-score mdl-card mdl-shadow--3dp">
+                <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>{{result.p_score}}</span></div></div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+              <div class="science-war-match-kaist-score mdl-card mdl-shadow--3dp">
+                <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>{{result.k_score}}</span></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- when not finished, Live match -->
+          {% if result.is_live == True %}
+          <div class="science-war-supporters-section">
+            <div class="science-war-supporters-section-text">
+              <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">진행중인 경기</div>
+              <div id="scoreboard">
+                <!-- Reloaded part(live matches) -->
+                {% for livematch in livematch %}
+                <div class="science-war-card-container mdl-grid">
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                    <div class="science-war-event-card__{{livematch.match_name}} mdl-card mdl-shadow--3dp">
+                      <div class="mdl-card__actions">
+                        <span class="science-war-card-image__event">{{livematch.경기명}}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+                    <div class="science-war-match-postech-score mdl-card mdl-shadow--3dp">
+                      <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>{{livematch.p_score}}</span></div></div>
+                    </div>
+                  </div>
+
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+                    <div class="science-war-match-kaist-score mdl-card mdl-shadow--3dp">
+                      <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>{{livematch.k_score}}</span></div></div>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </div> 
+              <p>
+                <a href="/live" class="science-war-link mdl-typography--font-light">보러 가기<i class="material-icons">chevron_right</i></a>
+              </p>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+
+        <div class="science-war-supporters-section-text science-war-banners">
+          <div id="slider">
+            <div id="variable_box">
+              <input type="radio" name="pos" id="pos1" checked>
+              <input type="radio" name="pos" id="pos2">
+              <input type="radio" name="pos" id="pos3">
+              <input type="radio" name="pos" id="pos4">
+              <ul>
+                <a href="/cyber/starcraft"><li></li></a>
+                <a href="/cyber"><li></li></a>
+                <a href="/about"><li></li></a>
+                <a href="/home"><li></li></a>
+              </ul>
+              <p class="pos">
+                <label for="pos1"></label>
+                <label for="pos2"></label>
+                <label for="pos3"></label>
+                <label for="pos4"></label>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
 
 {% block content %}{% endblock %}
 
@@ -155,8 +253,13 @@ limitations under the License
           </div>
         </div>
 
-        <div class="mdl-mega-footer--middle-section">
+        <div class="mdl-mega-footer--middle-section" style="float: left">
           <p class="mdl-typography--font-light">© 2018 포카전준비위원회<br>Powered by PoApper</p>
+        </div>
+        <div class="mdl-mega-footer--middle-section" style="float:right;">
+          <p class="mdl-typography--font-light" style="text-align: right;">Server by<br>
+            <img src="{% static 'images/naverD2.png' %}" height="80px">
+          </p>
         </div>
       </footer>
     </div>
@@ -166,5 +269,17 @@ limitations under the License
 
 {% block script %}{% endblock %}
 <script type="text/javascript" src="{% static 'js/reload.js' %}"></script>
+<script>
+  var currentInput = document.getElementsByTagName("input");
+  var slideIndex = currentInput.length - 1;
+  slideshow();
+
+  function slideshow() {
+    slideIndex++;
+    if(slideIndex >= currentInput.length) {slideIndex = 0;}
+    currentInput[slideIndex].checked = true;
+    setTimeout(slideshow, 2000);
+  }
+</script>
 </body>
 </html>
