@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, HttpResponseRedirect, HttpResponseNotFound, Http404
-from live.models import LiveMatch, Result
+from core.models import LiveMatch, Result, FinishedMatch
 # Create your views here.
 
 def to_home(request):
@@ -14,6 +14,25 @@ def home(request):
         'page': "2018 포카전",
     }
     return render(request, "page/home.html", context)
+
+def live(request):
+    livematch = LiveMatch.objects.all()
+    result = Result.objects.all()
+    finishedmatch = FinishedMatch.objects.all()
+    context = {
+        'livematch': livematch,
+        'result': result[0],
+        'matches': finishedmatch,
+        'page': "Live",
+    }
+    return render(request, "page/live.html", context)
+
+def reload_match(request):
+    livematch = LiveMatch.objects.all()
+    context = {
+        'livematch': livematch,
+    }
+    return render(request, 'page/reload_match.html', context)
 
 def about(request):
     livematch = LiveMatch.objects.all()

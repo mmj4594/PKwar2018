@@ -1,0 +1,173 @@
+{% extends "page/layout.html" %}
+{% load staticfiles %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/live.css' %}">
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"> </script>
+{% endblock %}
+
+{% block content %}
+    <div class="science-war-supporters-section-live">
+
+      <!-- when not finished, Live match -->
+      {% if result.is_end == False %}
+      <div class="science-war-supporters-section">
+        <div class="science-war-supporters-section-live">
+          <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">진행중인 경기</div>
+          <div id="scoreboard">
+
+            <!-- Reloaded part(live matches) -->
+            {% for livematch in livematch %}
+            <div class="science-war-card-container mdl-grid">
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="science-war-event-card__{{livematch.match_name}} mdl-card mdl-shadow--3dp">
+                  <div class="mdl-card__actions">
+                    <span class="science-war-card-image__event">{{livematch.경기명}}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+                <div class="science-war-match-postech-score mdl-card mdl-shadow--3dp">
+                  <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>{{livematch.p_score}}</span></div></div>
+                </div>
+              </div>
+
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+                <div class="science-war-match-kaist-score mdl-card mdl-shadow--3dp">
+                  <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>{{livematch.k_score}}</span></div></div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Not reloaded(chatting) -->
+        {% for livematch in livematch %}
+          {% if livematch.which_video != "" %}
+          <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+            <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+              <div class="vedio-container">
+                <iframe src="{{livematch.which_video}}" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+
+          {% if livematch.which_chat != "" %}
+          <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+            <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+              <div class="chat-container">
+                <iframe src="{{livematch.which_chat}}" frameborder="0"></iframe>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+        {% endfor %}
+        </div>
+      </div>
+
+
+      <!-- POSTECH wins -->
+      {% elif result.p_score > result.k_score %}
+      <div class="science-war-supporters-section">
+        <div class="science-war-supporters-section-live">
+          <div class="science-war-card-container mdl-grid">
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet"></div>
+            <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+              <div class="science-war-event-card__postech mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__event">2017</span>
+                </div>
+              </div>
+            </div>
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet"></div>
+          </div>
+          <p class=" science-war-text postech-title">
+            POSTECH 우승<br>
+          </p>
+        </div>
+      </div>
+
+      <!-- KAIST wins -->
+      {% elif result.p_score < result.k_score %}
+      <div class="science-war-supporters-section">
+        <div class="science-war-supporters-section-live">
+          <div class="science-war-card-container mdl-grid">
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet"></div>
+            <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+              <div class="science-war-event-card__kaist mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__event">2017</span>
+                </div>
+              </div>
+            </div>
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet"></div>
+          </div>
+          <p class="mdl-typography--font-light science-war-text kaist-title">
+            KAIST 우승
+          </p>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+
+
+<!-- Finished match -->
+
+<div id="finished_match">
+  <div class="science-war-supporters-section">
+    <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">종료된 경기</div>
+    {% for matches in matches reversed %}
+    <div id="{{matches.match_name}}">
+      <div class="science-war-supporters-section-live">
+        <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">{{matches.게임명}}</div>
+        {% if matches.which_video != '' %}
+        <div class="science-war-card-container mdl-grid">
+          <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+            <div class="science-war-player-card mdl-card mdl-shadow--3dp">
+              <div class="vedio-container">
+                <iframe width="100%" height="auto" src="{{matches.which_video}}" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+
+      <div class="science-war-supporters-section">
+        <div class="science-war-supporters-section-live">
+          <div class="science-war-card-container mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+              <div class="science-war-event-card__{{matches.match_name}} mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__actions">
+                  <span class="science-war-card-image__event">{{matches.게임명}}</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+              <div class="science-war-match-postech-score mdl-card mdl-shadow--3dp">
+                <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>{{matches.p_score}}</span></div></div>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+              <div class="science-war-match-kaist-score mdl-card mdl-shadow--3dp">
+                <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>{{matches.k_score}}</span></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="{% static 'js/reload.js' %}"></script>
+<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+{% endblock %}

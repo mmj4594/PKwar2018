@@ -28,12 +28,11 @@ limitations under the License
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <title>2018 POSTECH-KAIST Science War</title>
-  <link rel="shortcut icon" href="{%  static 'images/favicon.png' %}">
+  <link rel="shortcut icon" href="{% static 'images/favicon_package_v0.16/favicon.png' %}">
 
-  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{%  static 'apple-icon/57x57.jpg' %}" />
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{%  static 'apple-icon/72x72.jpg' %}" />
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{%  static 'apple-icon/114x114.jpg' %}" />
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{%  static 'apple-icon/144x144.jpg' %}" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon_package_v0.16/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon_package_v0.16/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon_package_v0.16/favicon-16x16.png' %}">
 
   <!-- Page styles -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
@@ -167,7 +166,8 @@ limitations under the License
           </div>
 
           <!-- when not finished, Live match -->
-          {% if result.is_live == True %}
+          {% if page == 'Live' %}
+          {% elif result.is_live == True %}
           <div class="science-war-supporters-section">
             <div class="science-war-supporters-section-text">
               <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">진행중인 경기</div>
