@@ -397,7 +397,7 @@ ul,li{list-style:none; padding: 0;}
   height:100%;
 }
 #slider a:nth-child(1)>li{
-  background: url('../images/banner_test.png') center/cover no-repeat;
+  background: url('../images/netmarble.jpg') center/cover no-repeat;
   background-size: contain;
 }
 #slider a:nth-child(2)>li{

@@ -106,6 +106,10 @@ limitations under the License
             <a class="mdl-navigation__link" href="/messages">축사</a>
             <a class="mdl-navigation__link" href="/schedule">일정 및 장소</a>
           <div class="science-war-drawer-separator"></div>
+            <span class="mdl-navigation__link" id="cyber">서포터즈</span>
+            <a class="mdl-navigation__link" href="/supporters">포카전 서포터즈</a>
+            <a class="mdl-navigation__link" href="http://labyrinth.postech.ac.kr:5000/">미궁</a>
+          <div class="science-war-drawer-separator"></div>
             <span class="mdl-navigation__link" id="cyber">경기</span>
             <a class="mdl-navigation__link" href="/sports/soccer">축구</a>
             <a class="mdl-navigation__link" href="/sports/basketball">농구</a>
@@ -124,10 +128,6 @@ limitations under the License
             <a class="mdl-navigation__link" href="/cyber/heroes_of_the_storm">히어로즈 오브 더 스톰</a>
             <a class="mdl-navigation__link" href="/cyber/overwatch">오버워치</a>
             <a class="mdl-navigation__link" href="/cyber/battlegrounds">배틀그라운드</a>
-          <div class="science-war-drawer-separator"></div>
-            <span class="mdl-navigation__link" id="cyber">서포터즈</span>
-            <a class="mdl-navigation__link" href="/supporters">포카전 서포터즈</a>
-            <a class="mdl-navigation__link" href="http://labyrinth.postech.ac.kr:5000/">미궁</a>
         </nav>
       </div>
     </div>
@@ -209,20 +209,26 @@ limitations under the License
           <div id="slider">
             <div id="variable_box">
               <input type="radio" name="pos" id="pos1" checked>
+              <!-- No Banner
               <input type="radio" name="pos" id="pos2">
               <input type="radio" name="pos" id="pos3">
               <input type="radio" name="pos" id="pos4">
+              -->
               <ul>
-                <a href="/cyber/starcraft"><li></li></a>
+                <a href="https://company.netmarble.com/"><li></li></a>
+                <!-- No Banner
+                <a href="http://labyrinth.postech.ac.kr:5000/"><li></li></a>
+                <a href="/supporters"><li></li></a>
                 <a href="/cyber"><li></li></a>
-                <a href="/about"><li></li></a>
-                <a href="/home"><li></li></a>
+                -->
               </ul>
               <p class="pos">
                 <label for="pos1"></label>
+                <!-- No Banner
                 <label for="pos2"></label>
                 <label for="pos3"></label>
                 <label for="pos4"></label>
+                -->
               </p>
             </div>
           </div>
@@ -278,7 +284,7 @@ limitations under the License
     slideIndex++;
     if(slideIndex >= currentInput.length) {slideIndex = 0;}
     currentInput[slideIndex].checked = true;
-    setTimeout(slideshow, 2000);
+    setTimeout(slideshow, 15000);
   }
 </script>
 </body>
