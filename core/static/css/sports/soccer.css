@@ -402,6 +402,13 @@ a img{
     padding-top: 16px;
   }
 
+.science-war-supporters-section-event {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 80px 16px 0 16px;
+}
+
 .science-war-supporters-section-image {
   background: url('../../images/devices.jpg') center top no-repeat;
   background-size: cover;
