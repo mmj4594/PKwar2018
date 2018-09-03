@@ -356,10 +356,6 @@
   /*border-bottom-style: solid;*/
 }
 
-.mdl-layout__header-row{
-  z-index: 100 !important;
-}
-
 .science-war-banners{
   max-width: 800px;
   margin-left: auto;
