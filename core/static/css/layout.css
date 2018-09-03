@@ -165,6 +165,12 @@
   background: url('../images/overwatch.png') center / cover;
 }
 
+.science-war-event-card__battlegrounds.mdl-card {
+  width: 100%;
+  padding-top: 100%;
+  background: url('../images/battlegrounds_player.png') center / cover;
+}
+
 .science-war-event-card__soccer.mdl-card {
   width: 100%;
   padding-top: 100%;
