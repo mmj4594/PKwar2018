@@ -19,6 +19,16 @@ limitations under the License
 
 <html lang="ko">
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125117205-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-125117205-1');
+  </script>
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -275,7 +285,6 @@ limitations under the License
 
 {% block script %}{% endblock %}
 <script type="text/javascript" src="{% static 'js/reload.js' %}"></script>
-
 <!-- No Banner
 <script>
   var currentInput = document.getElementsByTagName("input");
