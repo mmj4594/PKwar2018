@@ -87,156 +87,157 @@ limitations under the License
 </head>
 <body>
   <div class="mdl-layout mdl-js-layout">
-     <!--live scoreboard-->
-    <div class="science-war-content mdl-layout__content">
-          <!-- Always shows a header, even in smaller screens. -->
-      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header">
-          <div class="mdl-layout__header-row">
-            <!-- Title -->
-            <span class="mdl-layout-title">{{page}}</span>
-            <!-- Add spacer, to align navigation to the right -->
-            <div class="mdl-layout-spacer"></div>
-            <!-- Navigation. We hide it in small screens. -->
-            <nav class="mdl-navigation mdl-layout--large-screen-only">
-              <a class="mdl-navigation__link" href="/about">포카전이란?</a>
-              <a class="mdl-navigation__link" href="/schedule">일정</a>
-              <a class="mdl-navigation__link" href="http://labyrinth.postech.ac.kr:5000/">미궁</a>
-              <a class="mdl-navigation__link" href="/live">Live</a>
-            </nav>
-          </div>
-        </header>
-        <div class="mdl-layout__drawer">
-          <nav class="mdl-navigation">
-              <a href="/home"><img class="logo-image" src="{% static 'images/brand.png' %}"></a>
-            <div class="science-war-drawer-separator"></div>
-              <a class="mdl-navigation__link" href="/live" id="cyber">Live</a>
-            <div class="science-war-drawer-separator"></div>
-              <span class="mdl-navigation__link" id='cyber'>포카전</span>
-              <a class="mdl-navigation__link" href="/about">소개</a>
-              <a class="mdl-navigation__link" href="/messages">축사</a>
-              <a class="mdl-navigation__link" href="/schedule">일정 및 장소</a>
-            <div class="science-war-drawer-separator"></div>
-              <span class="mdl-navigation__link" id="cyber">서포터즈</span>
-              <a class="mdl-navigation__link" href="/supporters">포카전 서포터즈</a>
-              <a class="mdl-navigation__link" href="http://labyrinth.postech.ac.kr:5000/">미궁</a>
-            <div class="science-war-drawer-separator"></div>
-              <span class="mdl-navigation__link" id="cyber">경기</span>
-              <a class="mdl-navigation__link" href="/sports/soccer">축구</a>
-              <a class="mdl-navigation__link" href="/sports/basketball">농구</a>
-              <a class="mdl-navigation__link" href="/sports/baseball">야구</a>
-              <a class="mdl-navigation__link" href="/sports/esports">E-sports</a>
-              <a class="mdl-navigation__link" href="/sports/quiz">과학퀴즈</a>
-              <a class="mdl-navigation__link" href="/sports/hacking">해킹</a>
-              <a class="mdl-navigation__link" href="/sports/ai">A.I.</a>
-              <a class="mdl-navigation__link" href="/sports/badminton">배드민턴</a>
-            <div class="science-war-drawer-separator"></div>
-              <span class="mdl-navigation__link" id="cyber">사이버포카전</span>
-              <a class="mdl-navigation__link" href="/cyber">사이버포카전이란?</a>
-              <a class="mdl-navigation__link" href="/cyber/starcraft">스타크래프트1</a>
-              <a class="mdl-navigation__link" href="/cyber/hearthstone">하스스톤</a>
-              <a class="mdl-navigation__link" href="/cyber/kartrider">카트라이더</a>
-              <a class="mdl-navigation__link" href="/cyber/heroes_of_the_storm">히어로즈 오브 더 스톰</a>
-              <a class="mdl-navigation__link" href="/cyber/overwatch">오버워치</a>
-              <a class="mdl-navigation__link" href="/cyber/battlegrounds">배틀그라운드</a>
+ 
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">{{page}}</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" href="/about">포카전이란?</a>
+            <a class="mdl-navigation__link" href="/schedule">일정</a>
+            <a class="mdl-navigation__link" href="http://labyrinth.postech.ac.kr:5000/">미궁</a>
+            <a class="mdl-navigation__link" href="/live">Live</a>
           </nav>
         </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <nav class="mdl-navigation">
+            <a href="/home"><img class="logo-image" src="{% static 'images/brand.png' %}"></a>
+          <div class="science-war-drawer-separator"></div>
+            <a class="mdl-navigation__link" href="/live" id="cyber">Live</a>
+          <div class="science-war-drawer-separator"></div>
+            <span class="mdl-navigation__link" id='cyber'>포카전</span>
+            <a class="mdl-navigation__link" href="/about">소개</a>
+            <a class="mdl-navigation__link" href="/messages">축사</a>
+            <a class="mdl-navigation__link" href="/schedule">일정 및 장소</a>
+          <div class="science-war-drawer-separator"></div>
+            <span class="mdl-navigation__link" id="cyber">서포터즈</span>
+            <a class="mdl-navigation__link" href="/supporters">포카전 서포터즈</a>
+            <a class="mdl-navigation__link" href="http://labyrinth.postech.ac.kr:5000/">미궁</a>
+          <div class="science-war-drawer-separator"></div>
+            <span class="mdl-navigation__link" id="cyber">경기</span>
+            <a class="mdl-navigation__link" href="/sports/soccer">축구</a>
+            <a class="mdl-navigation__link" href="/sports/basketball">농구</a>
+            <a class="mdl-navigation__link" href="/sports/baseball">야구</a>
+            <a class="mdl-navigation__link" href="/sports/esports">E-sports</a>
+            <a class="mdl-navigation__link" href="/sports/quiz">과학퀴즈</a>
+            <a class="mdl-navigation__link" href="/sports/hacking">해킹</a>
+            <a class="mdl-navigation__link" href="/sports/ai">A.I.</a>
+            <a class="mdl-navigation__link" href="/sports/badminton">배드민턴</a>
+          <div class="science-war-drawer-separator"></div>
+            <span class="mdl-navigation__link" id="cyber">사이버포카전</span>
+            <a class="mdl-navigation__link" href="/cyber">사이버포카전이란?</a>
+            <a class="mdl-navigation__link" href="/cyber/starcraft">스타크래프트1</a>
+            <a class="mdl-navigation__link" href="/cyber/hearthstone">하스스톤</a>
+            <a class="mdl-navigation__link" href="/cyber/kartrider">카트라이더</a>
+            <a class="mdl-navigation__link" href="/cyber/heroes_of_the_storm">히어로즈 오브 더 스톰</a>
+            <a class="mdl-navigation__link" href="/cyber/overwatch">오버워치</a>
+            <a class="mdl-navigation__link" href="/cyber/battlegrounds">배틀그라운드</a>
+        </nav>
       </div>
-      {% block home %} {% endblock %}
-      <div class="science-war-supporters-section"> 
-        <div class="science-war-supporters-section-text science-war-scoreboard">
-          <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">전체 점수</div>
-          <div class="science-war-card-container mdl-grid">
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-              <div class="science-war-event-card__result mdl-card mdl-shadow--3dp">
-                <div class="mdl-card__actions">
-                  <span class="science-war-card-image__event"></span>
+
+      <!--live scoreboard-->
+      <div class="science-war-content mdl-layout__content">
+        {% block home %} {% endblock %}
+        <div class="science-war-supporters-section"> 
+          <div class="science-war-supporters-section-text science-war-scoreboard">
+            <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">전체 점수</div>
+            <div class="science-war-card-container mdl-grid">
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="science-war-event-card__result mdl-card mdl-shadow--3dp">
+                  <div class="mdl-card__actions">
+                    <span class="science-war-card-image__event"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+                <div class="science-war-match-postech-score mdl-card mdl-shadow--3dp">
+                  <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>{{result.p_score}}</span></div></div>
+                </div>
+              </div>
+
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+                <div class="science-war-match-kaist-score mdl-card mdl-shadow--3dp">
+                  <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>{{result.k_score}}</span></div></div>
                 </div>
               </div>
             </div>
 
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
-              <div class="science-war-match-postech-score mdl-card mdl-shadow--3dp">
-                <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>{{result.p_score}}</span></div></div>
-              </div>
-            </div>
+            <!-- when not finished, Live match -->
+            {% if page == 'Live' %}
+            {% elif result.is_live == True %}
+            <div class="science-war-supporters-section">
+              <div class="science-war-supporters-section-text">
+                <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">진행중인 경기</div>
+                <div id="scoreboard">
+                  <!-- Reloaded part(live matches) -->
+                  {% for livematch in livematch %}
+                  <div class="science-war-card-container mdl-grid">
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                      <div class="science-war-event-card__{{livematch.match_name}} mdl-card mdl-shadow--3dp">
+                        <div class="mdl-card__actions">
+                          <span class="science-war-card-image__event">{{livematch.경기명}}</span>
+                        </div>
+                      </div>
+                    </div>
 
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
-              <div class="science-war-match-kaist-score mdl-card mdl-shadow--3dp">
-                <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>{{result.k_score}}</span></div></div>
-              </div>
-            </div>
-          </div>
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+                      <div class="science-war-match-postech-score mdl-card mdl-shadow--3dp">
+                        <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>{{livematch.p_score}}</span></div></div>
+                      </div>
+                    </div>
 
-          <!-- when not finished, Live match -->
-          {% if page == 'Live' %}
-          {% elif result.is_live == True %}
-          <div class="science-war-supporters-section">
-            <div class="science-war-supporters-section-text">
-              <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">진행중인 경기</div>
-              <div id="scoreboard">
-                <!-- Reloaded part(live matches) -->
-                {% for livematch in livematch %}
-                <div class="science-war-card-container mdl-grid">
-                  <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                    <div class="science-war-event-card__{{livematch.match_name}} mdl-card mdl-shadow--3dp">
-                      <div class="mdl-card__actions">
-                        <span class="science-war-card-image__event">{{livematch.경기명}}</span>
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+                      <div class="science-war-match-kaist-score mdl-card mdl-shadow--3dp">
+                        <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>{{livematch.k_score}}</span></div></div>
                       </div>
                     </div>
                   </div>
-
-                  <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
-                    <div class="science-war-match-postech-score mdl-card mdl-shadow--3dp">
-                      <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>{{livematch.p_score}}</span></div></div>
-                    </div>
-                  </div>
-
-                  <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
-                    <div class="science-war-match-kaist-score mdl-card mdl-shadow--3dp">
-                      <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast science-war-result-score-text"><div><span>{{livematch.k_score}}</span></div></div>
-                    </div>
-                  </div>
-                </div>
-                {% endfor %}
-              </div> 
-              <p>
-                <a href="/live" class="science-war-link mdl-typography--font-light">보러 가기<i class="material-icons">chevron_right</i></a>
-              </p>
+                  {% endfor %}
+                </div> 
+                <p>
+                  <a href="/live" class="science-war-link mdl-typography--font-light">보러 가기<i class="material-icons">chevron_right</i></a>
+                </p>
+              </div>
             </div>
+            {% endif %}
           </div>
-          {% endif %}
-        </div>
 
-        <div class="science-war-supporters-section-text science-war-banners">
-          <div id="slider">
-            <div id="variable_box">
-              <!-- No Banner
-              <input type="radio" name="pos" id="pos1" checked>
-              <input type="radio" name="pos" id="pos2">
-              <input type="radio" name="pos" id="pos3">
-              <input type="radio" name="pos" id="pos4">
-              -->
-              <ul>
-                <a href="https://company.netmarble.com/"><li></li></a>
+          <div class="science-war-supporters-section-text science-war-banners">
+            <div id="slider">
+              <div id="variable_box">
                 <!-- No Banner
-                <a href="http://lemons.poapper.com"><li></li></a>
-                <a href="/supporters"><li></li></a>
-                <a href="/cyber"><li></li></a>
+                <input type="radio" name="pos" id="pos1" checked>
+                <input type="radio" name="pos" id="pos2">
+                <input type="radio" name="pos" id="pos3">
+                <input type="radio" name="pos" id="pos4">
                 -->
-              </ul>
-              <p class="pos">
-                <!-- No Banner
-                <label for="pos1"></label>
-                <label for="pos2"></label>
-                <label for="pos3"></label>
-                <label for="pos4"></label>
-                -->
-              </p>
+                <ul>
+                  <a href="https://company.netmarble.com/"><li></li></a>
+                  <!-- No Banner
+                  <a href="http://lemons.poapper.com"><li></li></a>
+                  <a href="/supporters"><li></li></a>
+                  <a href="/cyber"><li></li></a>
+                  -->
+                </ul>
+                <p class="pos">
+                  <!-- No Banner
+                  <label for="pos1"></label>
+                  <label for="pos2"></label>
+                  <label for="pos3"></label>
+                  <label for="pos4"></label>
+                  -->
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
 
 {% block content %}{% endblock %}
