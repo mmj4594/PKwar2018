@@ -352,7 +352,7 @@
 /*scoreboard size*/
 .science-war-scoreboard{
   max-width: 800px;
-  padding-top: 80px;
+  padding-top: 20px;
   /*border-bottom-style: solid;*/
 }
 
