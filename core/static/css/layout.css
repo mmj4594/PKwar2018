@@ -407,7 +407,7 @@ ul,li{list-style:none; padding: 0;}
   background-size: contain;
 }
 #slider a:nth-child(2)>li{
-  background: url('../images/lemons.png') center/cover;
+  background: url('../images/cyber-banner.png') center/cover;
   background-size: contain;
 }
 
