@@ -407,12 +407,12 @@ ul,li{list-style:none; padding: 0;}
   background-size: contain;
 }
 #slider a:nth-child(2)>li{
-  background: url('../images/cyber-banner.png') center/cover;
+  background: url('../images/cyber-banner.png') center/cover no-repeat;
   background-size: contain;
 }
 
 #slider a:nth-child(3)>li{
-  background: url('../images/banner_test.png') center/cover; 
+  background: url('../images/supporters-banner.png') center/cover no-repeat; 
   background-size: contain;
 }
 #slider a:nth-child(4)>li{
